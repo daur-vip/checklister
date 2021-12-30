@@ -115,11 +115,11 @@
 
     </header>
     <div class="body flex-grow-1 px-3">
-      <div class="container-lg">
+     
 
         @yield('content')
 
-      </div>
+     
     </div>
     <footer class="footer">
       <div><a href="https://coreui.io">CoreUI </a><a href="https://coreui.io">Bootstrap Admin Template</a> © 2021
