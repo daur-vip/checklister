@@ -11,7 +11,7 @@
 
 
 
-  <link rel="stylesheet" href="{{ asset('coreui4/css/simplebar.css') }}">
+  <link href="{{ asset('coreui4/css/simplebar.css') }}" rel="stylesheet">
 
   <link href="{{ asset('coreui4/css/coreui.min.css') }}" rel="stylesheet">
 
@@ -129,15 +129,15 @@
     </footer>
   </div>
 
-  <script src="coreui4/js/coreui.bundle.min.js"></script>
-  <script src="coreui4/js/simplebar.min.js"></script>
+  <script src="{{ asset('coreui4/js/coreui.bundle.min.js') }}"></script>
+  <script src="{{ asset('coreui4/js/simplebar.min.js') }}"></script>
 
 
 
-  <script src="coreui4/js/chart.min.js"></script>
-  <script src="coreui4/js/coreui-chartjs.js"></script>
-  <script src="coreui4/js/coreui-utils.js"></script>
-  <script src="coreui4/js/main.js"></script>
+  <script src="{{ asset('coreui4/js/chart.min.js') }}"></script>
+  <script src="{{ asset('coreui4/js/coreui-chartjs.js') }}"></script>
+  <script src="{{ asset('coreui4/js/coreui-utils.js') }}"></script>
+  <script src="{{ asset('coreui4/js/main.js') }}"></script>
 
 </body>
 
