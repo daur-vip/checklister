@@ -20,22 +20,29 @@
 
             <li class="nav-title">{{ __('Manage Checklists') }}</li>
             @foreach (App\Models\ChecklistGroup::with('checklists')->get() as $group)
-                <li class="nav-group" aria-expanded="false">
-                    <a class="nav-link" 
-                    href="{{ route('admin.checklist_groups.edit', $group->id) }}">
+                <li class="nav-group show" aria-expanded="true">
+                    <a class="nav-link" href="{{ route('admin.checklist_groups.edit', $group->id) }}">
                         <svg class="nav-icon">
-                            <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-puzzle"></use>
-                        </svg>{{ $group->name }}</a>
-                    <ul class="nav-group-items" style="height: 0px;">
+                            <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-puzzle') }}"></use>
+                        </svg>{{ $group->name }}
+                    </a>
+                    <ul class="nav-group-items" style="height: auto;">
                         @foreach ($group->checklists as $checklist)
                             <li class="nav-item">
-                                <a class="nav-link" 
-                                href="{{ route('admin.checklists.edit', $checklist->id) }}">
+                                <a class="nav-link"
+                                    href="{{ route('admin.checklists.edit', $checklist->id) }}">
                                     <span class="nav-icon"></span>
                                     {{ $checklist->name }}
                                 </a>
                             </li>
                         @endforeach
+                        <li class="nav-item">
+                            <a class="nav-link"
+                                href="{{ route('admin.checklist_groups.checklists.create', $group) }}">
+                                <span class="nav-icon"></span>
+                                {{ __('New Checklist') }}
+                            </a>
+                        </li>
                     </ul>
                 </li>
             @endforeach
@@ -47,7 +54,18 @@
                     </svg>{{ __('New group') }}
                 </a>
             </li>
-           
+
+            <li class="nav-group" aria-expanded="false"><a class="nav-link nav-group-toggle" href="#">
+                <svg class="nav-icon">
+                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
+                </svg> Buttons</a>
+                <ul class="nav-group-items" style="height: 0px;">
+                <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span> Buttons</a></li>
+                <li class="nav-item"><a class="nav-link" href="buttons/button-group.html"><span class="nav-icon"></span> Buttons Group</a></li>
+                <li class="nav-item"><a class="nav-link" href="buttons/dropdowns.html"><span class="nav-icon"></span> Dropdowns</a></li>
+                </ul>
+                </li>
+
 
         @endif
 

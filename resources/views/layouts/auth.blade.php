@@ -14,7 +14,7 @@
 
 
 
-    <link href="{{ asset('coreui4/css/simplebar.css') }}"  rel="stylesheet">
+    <link href="{{ asset('coreui4/css/simplebar.css') }}" rel="stylesheet">
 
     <link href="{{ asset('coreui4/css/coreui.min.css') }}" rel="stylesheet">
 

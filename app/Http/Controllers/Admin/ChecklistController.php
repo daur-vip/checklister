@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\ChecklistGroup;
 use Illuminate\Http\Request;
 
 class ChecklistController extends Controller
@@ -22,9 +23,9 @@ class ChecklistController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(ChecklistGroup $checklistGroup)
     {
-        //
+        return view('admin.checklists.create', compact('checklistGroup'));
     }
 
     /**
