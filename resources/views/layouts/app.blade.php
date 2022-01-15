@@ -9,7 +9,7 @@
 
   <title>CoreUI Free Bootstrap Admin Template</title>
 
-
+  @livewireStyles
 
   <link href="{{ asset('coreui4/css/simplebar.css') }}" rel="stylesheet">
 
@@ -138,7 +138,8 @@
   <script src="{{ asset('coreui4/js/coreui-chartjs.js') }}"></script>
   <script src="{{ asset('coreui4/js/coreui-utils.js') }}"></script>
   <script src="{{ asset('coreui4/js/main.js') }}"></script>
-
+  @livewireScripts
+  <script src="https://cdn.jsdelivr.net/gh/livewire/sortable@v0.x.x/dist/livewire-sortable.js"></script>
 </body>
 
 </html>

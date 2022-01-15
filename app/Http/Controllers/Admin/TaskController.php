@@ -7,6 +7,7 @@ use App\Http\Requests\StoreTaskRequest;
 use App\Models\Checklist;
 use App\Models\Task;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TaskController extends Controller
 {
@@ -25,7 +26,8 @@ class TaskController extends Controller
 
     public function store(StoreTaskRequest $request, Checklist $checklist)
     {
-        $checklist->tasks()->create($request->validated());
+        $position = $checklist->tasks()->max('position') + 1;
+        $checklist->tasks()->create($request->validated() + ['position' => $position]);
         
         return redirect()->route('admin.checklist_groups.checklists.edit',
         [
@@ -60,6 +62,11 @@ class TaskController extends Controller
 
     public function destroy(Checklist $checklist, Task $task)
     {
+
+        $checklist->tasks()->where('position', '>', $task->position)->update(
+            ['position' => DB::raw('position - 1')]
+        );
+
         $task->delete();
         
         return redirect()->route('admin.checklist_groups.checklists.edit',
