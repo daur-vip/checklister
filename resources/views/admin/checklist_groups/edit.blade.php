@@ -21,7 +21,7 @@
                     <div class="card-body">
                         <div class="mb-3">
                             <label for="name" class="form-label">
-                                Name
+                                {{ __('Name') }}
                             </label>
                             <input value="{{ $checklistGroup->name }}" type="text" class="form-control" id="name"
                                 name="name">

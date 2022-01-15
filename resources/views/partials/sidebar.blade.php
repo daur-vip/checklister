@@ -30,7 +30,7 @@
                         @foreach ($group->checklists as $checklist)
                             <li class="nav-item">
                                 <a class="nav-link"
-                                    href="{{ route('admin.checklists.edit', $checklist->id) }}">
+                                    href="{{ route('admin.checklist_groups.checklists.edit', [$group, $checklist]) }}">
                                     <span class="nav-icon"></span>
                                     {{ $checklist->name }}
                                 </a>
