@@ -50,7 +50,7 @@
 
 
             @livewire('tasks-table', ['checklist' => $checklist])
-            
+
 
             <div class="card">
                 @if ($errors->storetask->any())
@@ -67,7 +67,7 @@
                     <div class="card-header">{{ __('New Task') }}</div>
                     <div class="card-body">
                         <div class="form-group">
-                            <div class="mb-3">
+                            <div class="mb-3 ml-4">
                                 <label for="name" class="form-label">
                                     {{ __('Name') }}
                                 </label>
@@ -78,8 +78,7 @@
                                 <label for="description" class="form-label">
                                     {{ __('Description') }}
                                 </label>
-                                <textarea class="form-control" id="description" name="description"
-                                    rows="5">{{ old('description') }}</textarea>
+                                <textarea class="form-control" id="description" name="description" rows="5">{{ old('description') }}</textarea>
                             </div>
                         </div>
                     </div>

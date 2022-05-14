@@ -10,6 +10,14 @@
         @if (auth()->user()->is_admin)
 
             <li class="nav-title">{{ __('Admin') }}</li>
+
+            <li class="nav-group">
+                <a class="nav-link" href="{{ route('admin.flats.index') }}">
+                    <svg class="nav-icon">
+                        <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-puzzle') }}"></use>
+                    </svg>{{ __('Flats') }}
+                </a>
+            </li>
             <li class="nav-group">
                 <a class="nav-link" href="{{ route('admin.pages.index') }}">
                     <svg class="nav-icon">
@@ -56,15 +64,18 @@
             </li>
 
             <li class="nav-group" aria-expanded="false"><a class="nav-link nav-group-toggle" href="#">
-                <svg class="nav-icon">
-                <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
-                </svg> Buttons</a>
+                    <svg class="nav-icon">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-cursor"></use>
+                    </svg> Buttons</a>
                 <ul class="nav-group-items" style="height: 0px;">
-                <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span class="nav-icon"></span> Buttons</a></li>
-                <li class="nav-item"><a class="nav-link" href="buttons/button-group.html"><span class="nav-icon"></span> Buttons Group</a></li>
-                <li class="nav-item"><a class="nav-link" href="buttons/dropdowns.html"><span class="nav-icon"></span> Dropdowns</a></li>
+                    <li class="nav-item"><a class="nav-link" href="buttons/buttons.html"><span
+                                class="nav-icon"></span> Buttons</a></li>
+                    <li class="nav-item"><a class="nav-link" href="buttons/button-group.html"><span
+                                class="nav-icon"></span> Buttons Group</a></li>
+                    <li class="nav-item"><a class="nav-link" href="buttons/dropdowns.html"><span
+                                class="nav-icon"></span> Dropdowns</a></li>
                 </ul>
-                </li>
+            </li>
 
 
         @endif
