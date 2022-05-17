@@ -33,7 +33,7 @@ class ChecklistGroupController extends Controller
         return redirect()->route('home');
     }
 
-  
+
     /**
      * Show the form for editing the specified resource.
      *

@@ -10,7 +10,13 @@
         @if (auth()->user()->is_admin)
 
             <li class="nav-title">{{ __('Admin') }}</li>
-
+            <li class="nav-group">
+                <a class="nav-link" href="{{ route('admin.complexes.index') }}">
+                    <svg class="nav-icon">
+                        <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-puzzle') }}"></use>
+                    </svg>{{ __('Complexes') }}
+                </a>
+            </li>
             <li class="nav-group">
                 <a class="nav-link" href="{{ route('admin.flats.index') }}">
                     <svg class="nav-icon">

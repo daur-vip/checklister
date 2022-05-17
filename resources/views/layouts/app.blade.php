@@ -145,8 +145,12 @@
     <script src="{{ asset('coreui4/js/coreui-chartjs.js') }}"></script>
     <script src="{{ asset('coreui4/js/coreui-utils.js') }}"></script>
     <script src="{{ asset('coreui4/js/main.js') }}"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/34.0.0/classic/ckeditor.js"></script>
+
     @livewireScripts
     <script src="https://cdn.jsdelivr.net/gh/livewire/sortable@v0.x.x/dist/livewire-sortable.js"></script>
+
+    @yield('scripts')
 </body>
 
 </html>
