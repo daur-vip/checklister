@@ -11372,12 +11372,16 @@ select {
   }
 }
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   background: #fff;
+}
+
+.inviz {
+  display: none;
 }
 
 .wrap {
@@ -11444,7 +11448,7 @@ body {
   position: relative;
   width: 30px;
   height: 20px;
-  z-index: 3;
+  z-index: 60;
 }
 
 .header__burger:before,
@@ -11654,6 +11658,9 @@ body {
 }
 
 .slider {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/slider1.png);
+  background-size: cover;
+  background-position: center;
   min-height: calc(100vh - 139px);
   display: flex;
   align-items: center;
@@ -12357,7 +12364,7 @@ input:checked + label + .questions-content {
 }
 
 .about-5-item__title {
-  font-weight: 800;
+  font-weight: 700;
   font-size: 40px;
 }
 

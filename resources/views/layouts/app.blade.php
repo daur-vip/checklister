@@ -16,6 +16,7 @@
     <link href="{{ asset('coreui4/css/coreui.min.css') }}" rel="stylesheet">
 
     <link href="{{ asset('coreui4/css/coreui-chartjs.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/my.css') }}" rel="stylesheet">
 
 
 </head>

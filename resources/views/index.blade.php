@@ -1,70 +1,59 @@
 @extends('layouts.front')
 
 @section('content')
-    <section class="slider" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../{{ $complex->image1 }});    background-size: cover;
-                                                                                           background-position: center;">
-        <div class="gallery inviz">
-            <a href="/{{ $complex->image1 }}" class="big" rel="rel1"><img src="/{{ $complex->image1 }}"
-                    alt="Complex 1"></a>
-        </div>
-        <div class="slider-content slider-content--complex">
-            <h1 class="slider-title slider-title--complex">
-                {{ $complex->name }}
+    <section class="slider">
+        <div class="slider-content">
+            <h1 class="slider-title">
+                МY FLAT -<br />
+                недвижимость в Турции
             </h1>
-            <div class="slider-text slider-text--complex">{!! $complex->{'desc1_' . app()->getLocale()} !!}</div>
+            <hr class="slider-hr">
+            <p class="slider-text">Отличное решение для комфортной жизни и выгодного инвестирования!</p>
+            <img src="/img/slider-button.png" alt="Оставить заявку">
         </div>
     </section>
 
 
-
-    <section class="about-1">
-        <div class="max-wrap about-1-wrap">
-            <div class="about-1-text">
-                {!! $complex->{'desc2_' . app()->getLocale()} !!}
-            </div>
-            <div class="about-1-image gallery">
-
-                <a href="/{{ $complex->image2 }}" class="big" rel="rel1"><img src="/{{ $complex->image2 }}"
-                        alt="Complex 2"></a>
-
-            </div>
+    <section id="services" class="services smt">
+        <div class="services-header">
+            <h2 class="services-header-text">
+                Наши услуги
+            </h2>
         </div>
-    </section>
+        <div class="services-content">
+            <div class="max-wrap services-wrap">
+                <div class="services-item-wrap">
+                    <h3 class="services-item-title">
+                        Онлайн покупка недвижимости
+                    </h3>
+                    <div class="services-item services-item--1">
+                    </div>
+                </div>
+                <div class="services-item-wrap">
+                    <h3 class="services-item-title">
+                        Консультация и подбор
+                        недвижимости
+                    </h3>
+                    <div class="services-item services-item--2">
+                    </div>
+                </div>
+                <div class="services-item-wrap">
+                    <h3 class="services-item-title">
+                        Организация тура
+                        для клиентов
+                    </h3>
+                    <div class="services-item services-item--3">
+                    </div>
+                </div>
+                <div class="services-item-wrap">
+                    <h3 class="services-item-title">
+                        Безопасный перевод
+                        денег
+                    </h3>
+                    <div class="services-item services-item--4">
+                    </div>
+                </div>
 
-    <section class="about-2">
-        <div class="about-2-bg" style="background-image: url(../{{ $complex->image3 }});
-                                                                                           background-size: cover;
-                                                                                           background-repeat: no-repeat;
-                                                                                           background-position: center;">
-        </div>
-        <div class="gallery inviz">
-            <a href="/{{ $complex->image3 }}" class="big" rel="rel1"><img src="/{{ $complex->image3 }}"
-                    alt="Complex 1"></a>
-        </div>
-        <div class="about-2-wrap">
-            {!! $complex->{'desc3_' . app()->getLocale()} !!}
-        </div>
-        <div class="services-triangles complex-triangles">
-            <div class="complex-triangles-left"></div>
-            <div class="complex-triangles-right"></div>
-        </div>
-    </section>
-
-
-    <section class="about-3">
-        <div class="max-wrap about-3-wrap">
-            <div class="about-3-item--div gallery">
-
-                <a href="/{{ $complex->image4 }}" class="big" rel="rel1"><img class="about-3-item--img"
-                        src="/{{ $complex->image4 }}" alt=""></a>
-
-            </div>
-            <div class="about-3-item--text">
-                {!! $complex->{'desc4_' . app()->getLocale()} !!}
-            </div>
-            <div class="about-3-item--div gallery">
-                <a href="/{{ $complex->image5 }}" class="big" rel="rel1"><img class="about-3-item--img"
-                        src="/{{ $complex->image5 }}" alt=""></a>
             </div>
         </div>
         <div class="services-triangles">
@@ -73,63 +62,35 @@
         </div>
     </section>
 
-    <section class="about-4">
-        <h2 class="section-4__title">
-            Инфраструктура
-        </h2>
-        <div class="max-wrap">
-            <div class="about-4-wrap">
-                <div class="about-4-left gallery">
-                    <a href="/{{ $complex->image6 }}" class="big" rel="rel1"><img class="about-4-left__img"
-                            src="/{{ $complex->image6 }}" alt=""></a>
-                </div>
-                <div class="about-4-right">
-                    <div class="gallery">
-                        <a href="/{{ $complex->image7 }}" class="big" rel="rel1"><img
-                                class="about-4-right__img" src="/{{ $complex->image7 }}" alt=""></a>
-                    </div>
-                    <div class="gallery">
-                        <a href="/{{ $complex->image8 }}" class="big" rel="rel1"><img
-                                class="about-4-right__img" src="/{{ $complex->image8 }}" alt=""></a>
-                    </div>
-                    <div class="gallery">
-                        <a href="/{{ $complex->image9 }}" class="big" rel="rel1"><img
-                                class="about-4-right__img" src="/{{ $complex->image9 }}" alt=""></a>
-                    </div>
-                    <div class="gallery">
-                        <a href="/{{ $complex->image10 }}" class="big" rel="rel1"><img
-                                class="about-4-right__img" src="/{{ $complex->image10 }}" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="about-5">
-        <div class="gallery inviz">
-            <a href="/{{ $complex->image11 }}" class="big" rel="rel1"><img src="/{{ $complex->image11 }}"
-                    alt="Complex 1"></a>
-        </div>
-        <div class="about-5-bg" style="background-image: url(/{{ $complex->image11 }});
-                                                                                           background-size: cover;
-                                                                                           background-repeat: no-repeat;
-                                                                                           background-position: center;">
-        </div>
-        <div class="about-5-wrap">
-            <div class="about-5-item">
-                <h4 class="about-5-item__title">{{ __('Расстояние до') }} </h4>
-                <div class="about-5-item__text">{!! $complex->{'desc5_' . app()->getLocale()} !!}</div>
-            </div>
-            <div class="about-5-item">
-                <h4 class="about-5-item__title">{{ __('Квартиры') }}</h4>
-                <div class="about-5-item__text">{!! $complex->{'desc6_' . app()->getLocale()} !!}</div>
-            </div>
-        </div>
-    </section>
-
 
     <main id="flats" class="main smt">
+        <form action="#">
+            <div class="search">
+                <div class="search-params">
+                    <select class="search-param">
+                        <option>Выберите район
+                        </option>
+                        <option>234</option>
+                    </select>
+                    <select class="search-param">
+                        <option>Количество комнат</option>
+                        <option>234</option>
+                    </select>
+                    <select class="search-param">
+                        <option>Отображаемая валюта</option>
+                        <option>234</option>
+                    </select>
+                    <select class="search-param">
+                        <option>Сортировать по</option>
+                        <option>234</option>
+                    </select>
+                </div>
+                <div class="search-button-div">
+                    <button class="search-button" type="submit"><img src="/img/search-button.png" alt="Search"></button>
+                </div>
+            </div>
+        </form>
+
         <div class="results">
             <div class="max-wrap">
                 <div class="result-items">
@@ -361,10 +322,180 @@
                             </svg>Площадь: 53 кв.м.
                         </p>
                     </div>
+
+                </div>
+                <a class="results-more" href="#">Показать еще...</a>
+            </div>
+        </div>
+
+    </main>
+
+
+    <section class="post-services">
+        <div class="max-wrap">
+            <h2 class="post-services-title">
+                Постпродажный сервис
+            </h2>
+            <div class="post-services-wrap">
+                <div class="post-services-item">
+                    <fieldset class="post-services-item__fieldset">
+                        <legend class="post-services-item__legend"><img src="/img/postservices-1.svg" alt=""></legend>
+                        <h4 class="post-services-item__title">
+                            Услуги юриста
+                        </h4>
+                        <p class="post-services-item__text">
+                            Наши юристы полностью сопровождают Вас на всех этапах сделки. Помогают со сбором и оформлением
+                            необходимых документов. С
+                            нами процедура оформления будет полностью прозрачной и не потребует много времени.
+                        </p>
+                    </fieldset>
+                </div>
+                <div class="post-services-item">
+                    <fieldset class="post-services-item__fieldset">
+                        <legend class="post-services-item__legend"><img src="/img/postservices-2.svg" alt=""></legend>
+                        <h4 class="post-services-item__title">
+                            Услуги дизайнера
+                        </h4>
+                        <p class="post-services-item__text">
+                            Наши дизайнеры готовы создать для Вас квартиру мечты. Креативные идеи с тонким ощущением вкуса и
+                            цвета, а также
+                            возможность создавать новое и не бояться экспериментировать. Поможем сделать ваш интерьер лучше.
+                        </p>
+                    </fieldset>
+                </div>
+                <div class="post-services-item">
+                    <fieldset class="post-services-item__fieldset">
+                        <legend class="post-services-item__legend"><img src="/img/postservices-3.svg" alt=""></legend>
+                        <h4 class="post-services-item__title">
+                            Клининг
+                        </h4>
+                        <p class="post-services-item__text">
+                            Когда Ваша квартира вот вот будет готова, сразу закрадываются мысли о генеральной уборке. Наши
+                            специалисты готовы
+                            сделать это за Вас. Профессиональный клининг с использованием современного оборудования для
+                            Вашего
+                            комфорта и экономии
+                            времени.
+                        </p>
+                    </fieldset>
+                </div>
+                <div class="post-services-item">
+                    <fieldset class="post-services-item__fieldset">
+                        <legend class="post-services-item__legend"><img src="/img/postservices-4.svg" alt=""></legend>
+                        <h4 class="post-services-item__title">
+                            Оборудование бытовой техникой, закуп мебели и текстиля
+                        </h4>
+                        <p class="post-services-item__text">
+                            После покупки недвижимости, встаёт закономерный вопрос о покупке мебели и бытовой техники. И
+                            здесь
+                            мы
+                            готовы Вам помочь.
+                            Мы сотрудничаем с лучшими производителями мебели и бытовой техники, которую Вы сможете
+                            приобрести
+                            по
+                            очень выгодным
+                            ценам.
+                        </p>
+                    </fieldset>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
+
+    <section class="media">
+        <div class="max-wrap">
+            <div class="media-wrap">
+                <h2 class="media-title">
+                    СМИ о нас
+                </h2>
+                <p class="media-desc">
+                    Lorem Ipsum является текст-заполнитель обычно используется в графических, печать и издательской
+                    индустрии
+                    для
+                    предварительного просмотра макета и визуальных макетах
+                </p>
+                <div class="media-items">
+                    <div class="media-item-container">
+                        <div class="media-item">
+                            <img src="/img/media-quote.png" alt="quote" class="media-quote">
+                            <div class="media-content">
+                                <p class="media-text">
+                                    Lorem Ipsum является текст-заполнитель обычно используется в графических, печать</p>
+                                <p class="media-unit">
+                                    - Портал "ИМЯ"
+                                </p>
+                                <a href="#" class="media-link">Перейти</a>
+                            </div>
+
+                            <div class="media-image">
+                                <img src="/img/media-1.jpg" alt="Media 1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="media-item-container">
+                        <div class="media-item">
+                            <img src="/img/media-quote.png" alt="quote" class="media-quote">
+                            <div class="media-content">
+                                <p class="media-text">
+                                    Lorem Ipsum является текст-заполнитель обычно используется в графических, печать</p>
+                                <p class="media-unit">
+                                    - Портал "ИМЯ"
+                                </p>
+                                <a href="#" class="media-link">Перейти</a>
+                            </div>
+
+                            <div class="media-image">
+                                <img src="/img/media-2.jpg" alt="Media 2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="questions">
+        <h2 class="questions-title">
+            Вопрос - ответ
+        </h2>
+
+        <div class="max-wrap">
+            <div class="questions-items">
+                <div class="questions-item">
+
+                    <input class="questions-checkbox" type="checkbox" id="title1" />
+                    <label class="questions-label" for="title1">Accordion One<div class="questions-plus">+</div>
+
+                    </label>
+                    <div class="questions-content">
+                        <p> Your content goes here inside this division with the class "content".Your content goes here
+                            inside
+                            this division with the class "content".Your content goes here inside this division with the
+                            class
+                            "content".Your content goes here inside this division with the class "content".</p>
+                    </div>
+                </div>
+                <div class="questions-item">
+                    <input class="questions-checkbox" type="checkbox" id="title2" />
+                    <label class="questions-label" for="title2">Accordion One<div class="questions-plus">+</div></label>
+
+                    <div class="questions-content">
+                        <p>Your content goes here inside this division with the class "content".</p>
+                    </div>
+                </div>
+
+                <div class="questions-item">
+                    <input class="questions-checkbox" type="checkbox" id="title3" />
+                    <label class="questions-label" for="title3">Accordion One<div class="questions-plus">+</div></label>
+
+                    <div class="questions-content">
+                        <p>Your content goes here inside this division with the class "content".</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 @endsection
 
 @section('scripts')
@@ -377,5 +508,5 @@
 @endsection
 
 @section('footer-style')
-    footer-waves-white
+    footer-waves
 @endsection
