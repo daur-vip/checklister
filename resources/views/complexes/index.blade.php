@@ -1,5 +1,4 @@
 adsfsdfsdfsdfs adsfsdfsdfsdfs
 @foreach ($complexes as $complex)
-    <a href="{{ route('complexes.show', $complex->id) }}">{{ $complex->name }}</a>
-    {{ $complex }}
+    <a href="{{ route('complex.show', $complex->id) }}">{{ $complex->name }}</a>
 @endforeach

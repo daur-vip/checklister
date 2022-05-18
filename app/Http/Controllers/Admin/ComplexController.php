@@ -42,17 +42,17 @@ class ComplexController extends Controller
         $validatedData = $request->validate(
             [
                 'name' => 'required|unique:complexes|max:50',
-                'image1' => 'required|image|mimes:jpg,jpeg|max:4096',
-                'image2' => 'required|image|mimes:jpg,jpeg|max:4096',
-                'image3' => 'required|image|mimes:jpg,jpeg|max:4096',
-                'image4' => 'required|image|mimes:jpg,jpeg|max:4096',
-                'image5' => 'required|image|mimes:jpg,jpeg|max:4096',
-                'image6' => 'required|image|mimes:jpg,jpeg|max:4096',
-                'image7' => 'required|image|mimes:jpg,jpeg|max:4096',
-                'image8' => 'required|image|mimes:jpg,jpeg|max:4096',
-                'image9' => 'required|image|mimes:jpg,jpeg|max:4096',
-                'image10' => 'required|image|mimes:jpg,jpeg|max:4096',
-                'image11' => 'required|image|mimes:jpg,jpeg|max:4096',
+                'image1' => 'required|image|mimes:jpg,jpeg|max:10000',
+                'image2' => 'required|image|mimes:jpg,jpeg|max:10000',
+                'image3' => 'required|image|mimes:jpg,jpeg|max:10000',
+                'image4' => 'required|image|mimes:jpg,jpeg|max:10000',
+                'image5' => 'required|image|mimes:jpg,jpeg|max:10000',
+                'image6' => 'required|image|mimes:jpg,jpeg|max:10000',
+                'image7' => 'required|image|mimes:jpg,jpeg|max:10000',
+                'image8' => 'required|image|mimes:jpg,jpeg|max:10000',
+                'image9' => 'required|image|mimes:jpg,jpeg|max:10000',
+                'image10' => 'required|image|mimes:jpg,jpeg|max:10000',
+                'image11' => 'required|image|mimes:jpg,jpeg|max:10000',
 
             ]
         );
@@ -64,7 +64,7 @@ class ComplexController extends Controller
             $imageNameGen = hexdec(uniqid()) . '.' . strtolower($image->getClientOriginalExtension());
             $fullImagePath = 'images/complexes/' . $imageNameGen;
             $img = Image::make($image);
-            $img->resize(1000, 1000, function ($constraint) {
+            $img->resize(1200, 1200, function ($constraint) {
                 $constraint->aspectRatio();
                 $constraint->upsize();
             });
@@ -139,17 +139,17 @@ class ComplexController extends Controller
         $validatedData = $request->validate(
             [
                 'name' => 'required|max:50',
-                'image1' => 'image|mimes:jpg,jpeg|max:4096',
-                'image2' => 'image|mimes:jpg,jpeg|max:4096',
-                'image3' => 'image|mimes:jpg,jpeg|max:4096',
-                'image4' => 'image|mimes:jpg,jpeg|max:4096',
-                'image5' => 'image|mimes:jpg,jpeg|max:4096',
-                'image6' => 'image|mimes:jpg,jpeg|max:4096',
-                'image7' => 'image|mimes:jpg,jpeg|max:4096',
-                'image8' => 'image|mimes:jpg,jpeg|max:4096',
-                'image9' => 'image|mimes:jpg,jpeg|max:4096',
-                'image10' => 'image|mimes:jpg,jpeg|max:4096',
-                'image11' => 'image|mimes:jpg,jpeg|max:4096',
+                'image1' => 'image|mimes:jpg,jpeg|max:10000',
+                'image2' => 'image|mimes:jpg,jpeg|max:10000',
+                'image3' => 'image|mimes:jpg,jpeg|max:10000',
+                'image4' => 'image|mimes:jpg,jpeg|max:10000',
+                'image5' => 'image|mimes:jpg,jpeg|max:10000',
+                'image6' => 'image|mimes:jpg,jpeg|max:10000',
+                'image7' => 'image|mimes:jpg,jpeg|max:10000',
+                'image8' => 'image|mimes:jpg,jpeg|max:10000',
+                'image9' => 'image|mimes:jpg,jpeg|max:10000',
+                'image10' => 'image|mimes:jpg,jpeg|max:10000',
+                'image11' => 'image|mimes:jpg,jpeg|max:10000',
 
             ]
         );
@@ -169,7 +169,7 @@ class ComplexController extends Controller
                 $imageNameGen = hexdec(uniqid()) . '.' . strtolower($image->getClientOriginalExtension());
                 $fullImagePath = 'images/complexes/' . $imageNameGen;
                 $img = Image::make($image);
-                $img->resize(1000, 1000, function ($constraint) {
+                $img->resize(1400, 1400, function ($constraint) {
                     $constraint->aspectRatio();
                     $constraint->upsize();
                 });

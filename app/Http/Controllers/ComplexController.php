@@ -25,6 +25,7 @@ class ComplexController extends Controller
      */
     public function show($id)
     {
-        //
+        $complex = Complex::find($id);
+        return view('complexes.show', compact('complex'));
     }
 }
