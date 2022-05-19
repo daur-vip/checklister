@@ -70,7 +70,7 @@ if (session()->get('locale') == null) {
             <div class="header-left">
                 <div class="header-contact">
                     <img class="header-flag" src="/img/flag-turkey.svg" alt="Turkey phone">
-                    <span class="header-coutry">{{ __('Турция') }} {{ session()->get('locale') }}</span><br>
+                    <span class="header-coutry">{{ __('Турция') }}</span><br>
                     <a class="header-phone" href="tel:+905348268407">+905348268407</a>
                 </div>
                 <div class="header-contact">

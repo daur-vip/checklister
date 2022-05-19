@@ -11,7 +11,7 @@
     @endphp
     <section class="slider"
         style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../{{ $complex->image1 }});    background-size: cover;
-                                                                                                       background-position: center;">
+                                                                                                                       background-position: center;">
         <div class="gallery inviz">
             <a href="/{{ $complex->image1 }}" class="big" rel="rel1"><img src="/{{ $complex->image1 }}"
                     alt="Complex 1"></a>
@@ -43,9 +43,9 @@
     <section class="about-2">
         <div class="about-2-bg"
             style="background-image: url(../{{ $complex->image3 }});
-                                                                                                       background-size: cover;
-                                                                                                       background-repeat: no-repeat;
-                                                                                                       background-position: center;">
+                                                                                                                       background-size: cover;
+                                                                                                                       background-repeat: no-repeat;
+                                                                                                                       background-position: center;">
         </div>
         <div class="gallery inviz">
             <a href="/{{ $complex->image3 }}" class="big" rel="rel1"><img src="/{{ $complex->image3 }}"
@@ -65,16 +65,16 @@
         <div class="max-wrap about-3-wrap">
             <div class="about-3-item--div gallery">
 
-                <a href="/{{ $complex->image4 }}" class="big" rel="rel1"><img class="about-3-item--img"
-                        src="/{{ $complex->image4 }}" alt=""></a>
+                <a class="ablock" href="/{{ $complex->image4 }}" class="big" rel="rel1"><img
+                        class="about-3-item--img" src="/{{ $complex->image4 }}" alt=""></a>
 
             </div>
             <div class="about-3-item--text">
                 {!! $complex->{'desc4_' . app()->getLocale()} !!}
             </div>
             <div class="about-3-item--div gallery">
-                <a href="/{{ $complex->image5 }}" class="big" rel="rel1"><img class="about-3-item--img"
-                        src="/{{ $complex->image5 }}" alt=""></a>
+                <a class="ablock" href="/{{ $complex->image5 }}" class="big" rel="rel1"><img
+                        class="about-3-item--img" src="/{{ $complex->image5 }}" alt=""></a>
             </div>
         </div>
         <div class="services-triangles">
@@ -85,7 +85,7 @@
 
     <section class="about-4">
         <h2 class="section-4__title">
-            Инфраструктура
+            {{ __('Инфраструктура') }}
         </h2>
         <div class="max-wrap">
             <div class="about-4-wrap">
@@ -123,9 +123,9 @@
         </div>
         <div class="about-5-bg"
             style="background-image: url(/{{ $complex->image11 }});
-                                                                                                       background-size: cover;
-                                                                                                       background-repeat: no-repeat;
-                                                                                                       background-position: center;">
+                                                                                                                       background-size: cover;
+                                                                                                                       background-repeat: no-repeat;
+                                                                                                                       background-position: center;">
         </div>
         <div class="about-5-wrap">
             <div class="about-5-item">

@@ -453,49 +453,6 @@
             </div>
         </div>
     </section>
-
-    <section class="questions">
-        <h2 class="questions-title">
-            Вопрос - ответ
-        </h2>
-
-        <div class="max-wrap">
-            <div class="questions-items">
-                <div class="questions-item">
-
-                    <input class="questions-checkbox" type="checkbox" id="title1" />
-                    <label class="questions-label" for="title1">Accordion One<div class="questions-plus">+</div>
-
-                    </label>
-                    <div class="questions-content">
-                        <p> Your content goes here inside this division with the class "content".Your content goes here
-                            inside
-                            this division with the class "content".Your content goes here inside this division with the
-                            class
-                            "content".Your content goes here inside this division with the class "content".</p>
-                    </div>
-                </div>
-                <div class="questions-item">
-                    <input class="questions-checkbox" type="checkbox" id="title2" />
-                    <label class="questions-label" for="title2">Accordion One<div class="questions-plus">+</div></label>
-
-                    <div class="questions-content">
-                        <p>Your content goes here inside this division with the class "content".</p>
-                    </div>
-                </div>
-
-                <div class="questions-item">
-                    <input class="questions-checkbox" type="checkbox" id="title3" />
-                    <label class="questions-label" for="title3">Accordion One<div class="questions-plus">+</div></label>
-
-                    <div class="questions-content">
-                        <p>Your content goes here inside this division with the class "content".</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
 @endsection
 
 @section('scripts')

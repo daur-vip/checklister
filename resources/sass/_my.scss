@@ -193,7 +193,7 @@ body {
 .header-phone {
    text-decoration: none;
    font-weight: 400;
-   font-size: 12px;
+   font-size: 14px;
    line-height: 14px;
    color: #141b2d;
 }
@@ -274,7 +274,7 @@ body {
    margin: 0;
    padding-left: 0;
    display: flex;
-   gap: 80px;
+   gap: 70px;
    align-items: center;
 }
 
@@ -747,7 +747,6 @@ input:checked+label+.questions-content {
    height: 157px;
    background-image: url(/img/footer-waves.png);
    background-repeat: no-repeat;
-   background-position: center;
    background-size: 100% 100%;
 }
 
@@ -1002,7 +1001,7 @@ input:checked+label+.questions-content {
    height: 157px;
    background-image: url(/img/footer-waves-white.png);
    background-repeat: no-repeat;
-   background-position: center;
+
    background-size: 100% 100%;
 }
 
@@ -1157,7 +1156,7 @@ input:checked+label+.questions-content {
    }
 
    .slider-title {
-      font-size: 32px;
+      font-size: 28px;
       padding: 0px 0px;
    }
 
@@ -1348,6 +1347,10 @@ input:checked+label+.questions-content {
       width: 100%;
    }
 
+   .about-3-item--img {
+      width: 100%;
+   }
+
    .about-3-item--text {
       width: 100%;
       font-size: 16px;
@@ -1406,5 +1409,9 @@ input:checked+label+.questions-content {
       width: 100%;
    }
 
+   .ablock {
+      display: block;
+      width: 100%;
+   }
 
 }
