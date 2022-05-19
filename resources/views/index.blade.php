@@ -1,6 +1,13 @@
 @extends('layouts.front')
 
 @section('content')
+    @php
+    if (session()->get('locale') == null) {
+        session()->put('locale', app()->getLocale());
+    } else {
+        App::setLocale(session()->get('locale'));
+    }
+    @endphp
     <section class="slider">
         <div class="slider-content">
             <h1 class="slider-title">
@@ -9,7 +16,7 @@
             </h1>
             <hr class="slider-hr">
             <p class="slider-text">Отличное решение для комфортной жизни и выгодного инвестирования!</p>
-            <img src="/img/slider-button.png" alt="Оставить заявку">
+            <button id="myBtn2" class="nav-contact-us">{{ __('Связаться с нами') }}</button>
         </div>
     </section>
 

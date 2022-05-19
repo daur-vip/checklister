@@ -27,6 +27,35 @@ if (session()->get('locale') == null) {
 
 
 <body>
+
+    <!-- The Modal -->
+    <div id="myModal" class="my-modal">
+
+        <!-- Modal content -->
+        <div class="my-modal-content">
+            <div class="my-modal-header">
+                <h2></h2>
+                <span class="my-close">&times;</span>
+            </div>
+            <div class="my-modal-body">
+                <p class="my-modal-title">{{ __('Оставить заявку') }}</p>
+                <form class="my-modal-form" id="my-modal-form" action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <input class="my-modal-input" type="text" name="name" id="name" placeholder="{{ __('Имя') }}">
+                    <input class="my-modal-input" type="text" name="phone_number" id="phone_number"
+                        placeholder="{{ __('Номер телефона') }}">
+                    <textarea name="message" id="message" cols="30" rows="4" class="my-modal-textarea" placeholder="Сообщение"></textarea>
+                    <div class="my-modal-submit">
+                        <a class="nav-contact-us" href="{{ route('index') }}" onclick="event.preventDefault();
+              document.getElementById('my-modal-form').submit();">
+                            {{ __('Отправить') }}
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
     <div class="mobile-menu">
         <div class="container">
             <div class="header__body">
@@ -114,7 +143,7 @@ if (session()->get('locale') == null) {
                         <a class="nav-item" href="#">{{ __('Новости') }}</a>
                     </li>
                     <li>
-                        <a class="nav-item" href="#"><img src="/img/logo.svg" alt="Logo"></a>
+                        <a class="nav-item" href="/"><img src="/img/logo.svg" alt="Logo"></a>
                     </li>
                     <li>
                         <a class="nav-item" href="#services">{{ __('Услуги') }}</a>
@@ -128,7 +157,13 @@ if (session()->get('locale') == null) {
 
                 </ul>
             </div>
-            <div class="nav-right"><a href="#"><img src="/img/header-button.png" alt="Оставить заявку"></a></div>
+            <div class="nav-right">
+                <!-- Trigger/Open The Modal -->
+                <button id="myBtn" class="nav-contact-us">{{ __('Оставить заявку') }}</button>
+
+
+            </div>
+
         </div>
     </nav>
 
@@ -206,6 +241,63 @@ if (session()->get('locale') == null) {
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 
     <script src="/js/script.js"></script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("my-close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "flex";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn2");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("my-close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "flex";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+
     @yield('scripts')
 
 </html>
