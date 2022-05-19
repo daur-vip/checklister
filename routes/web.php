@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\FlatController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\TaskController;
 use App\Http\Controllers\LangController;
+use App\Http\Controllers\SendEmailController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,3 +44,6 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('checklists.tasks', TaskController::class);
     });
 });
+
+
+Route::post('/sendemail/send', [SendEmailController::class, 'send'])->name('sendemail');

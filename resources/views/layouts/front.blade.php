@@ -39,10 +39,10 @@ if (session()->get('locale') == null) {
             </div>
             <div class="my-modal-body">
                 <p class="my-modal-title">{{ __('Оставить заявку') }}</p>
-                <form class="my-modal-form" id="my-modal-form" action="{{ route('logout') }}" method="POST">
+                <form class="my-modal-form" id="my-modal-form" action="{{ route('sendemail') }}" method="POST">
                     @csrf
                     <input class="my-modal-input" type="text" name="name" id="name" placeholder="{{ __('Имя') }}">
-                    <input class="my-modal-input" type="text" name="phone_number" id="phone_number"
+                    <input class="my-modal-input" type="text" name="phone" id="phone"
                         placeholder="{{ __('Номер телефона') }}">
                     <textarea name="message" id="message" cols="30" rows="4" class="my-modal-textarea" placeholder="Сообщение"></textarea>
                     <div class="my-modal-submit">
