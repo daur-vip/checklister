@@ -16,6 +16,8 @@ class CreateComplexesTable extends Migration
         Schema::create('complexes', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('area_ru');
+            $table->string('area_en');
             $table->text('desc1_ru')->nullable();
             $table->text('desc2_ru')->nullable();
             $table->text('desc3_ru')->nullable();

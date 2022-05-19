@@ -42,17 +42,19 @@ class ComplexController extends Controller
         $validatedData = $request->validate(
             [
                 'name' => 'required|unique:complexes|max:50',
-                'image1' => 'required|image|mimes:jpg,jpeg|max:10000',
-                'image2' => 'required|image|mimes:jpg,jpeg|max:10000',
-                'image3' => 'required|image|mimes:jpg,jpeg|max:10000',
-                'image4' => 'required|image|mimes:jpg,jpeg|max:10000',
-                'image5' => 'required|image|mimes:jpg,jpeg|max:10000',
-                'image6' => 'required|image|mimes:jpg,jpeg|max:10000',
-                'image7' => 'required|image|mimes:jpg,jpeg|max:10000',
-                'image8' => 'required|image|mimes:jpg,jpeg|max:10000',
-                'image9' => 'required|image|mimes:jpg,jpeg|max:10000',
-                'image10' => 'required|image|mimes:jpg,jpeg|max:10000',
-                'image11' => 'required|image|mimes:jpg,jpeg|max:10000',
+                'area_ru' => 'required',
+                'area_en' => 'required',
+                'image1' => 'required|image|mimes:jpg,jpeg|max:20000',
+                'image2' => 'required|image|mimes:jpg,jpeg|max:20000',
+                'image3' => 'required|image|mimes:jpg,jpeg|max:20000',
+                'image4' => 'required|image|mimes:jpg,jpeg|max:20000',
+                'image5' => 'required|image|mimes:jpg,jpeg|max:20000',
+                'image6' => 'required|image|mimes:jpg,jpeg|max:20000',
+                'image7' => 'required|image|mimes:jpg,jpeg|max:20000',
+                'image8' => 'required|image|mimes:jpg,jpeg|max:20000',
+                'image9' => 'required|image|mimes:jpg,jpeg|max:20000',
+                'image10' => 'required|image|mimes:jpg,jpeg|max:20000',
+                'image11' => 'required|image|mimes:jpg,jpeg|max:20000',
 
             ]
         );
@@ -117,6 +119,8 @@ class ComplexController extends Controller
 
         $data = [
             'name' => $request->name,
+            'area_ru' => $request->area_ru,
+            'area_en' => $request->area_en,
             'desc1_ru' => $request->desc1_ru,
             'desc1_en' => $request->desc1_en,
             'desc2_ru' => $request->desc2_ru,
@@ -151,9 +155,9 @@ class ComplexController extends Controller
             $data[$key] = $myNull;
         }
 
-        $data['pros_1'] = $request->pros_1;
-        $data['pros_2'] = $request->pros_2;
-        $data['pros_3'] = $request->pros_3;
+        // $data['pros_1'] = $request->pros_1;
+        // $data['pros_2'] = $request->pros_2;
+        // $data['pros_3'] = $request->pros_3;
 
         Complex::create($data);
         return Redirect()->back()->with('success', 'Complex added successfully');
@@ -194,17 +198,19 @@ class ComplexController extends Controller
         $validatedData = $request->validate(
             [
                 'name' => 'required|max:50',
-                'image1' => 'image|mimes:jpg,jpeg|max:10000',
-                'image2' => 'image|mimes:jpg,jpeg|max:10000',
-                'image3' => 'image|mimes:jpg,jpeg|max:10000',
-                'image4' => 'image|mimes:jpg,jpeg|max:10000',
-                'image5' => 'image|mimes:jpg,jpeg|max:10000',
-                'image6' => 'image|mimes:jpg,jpeg|max:10000',
-                'image7' => 'image|mimes:jpg,jpeg|max:10000',
-                'image8' => 'image|mimes:jpg,jpeg|max:10000',
-                'image9' => 'image|mimes:jpg,jpeg|max:10000',
-                'image10' => 'image|mimes:jpg,jpeg|max:10000',
-                'image11' => 'image|mimes:jpg,jpeg|max:10000',
+                'area_ru' => 'required',
+                'area_en' => 'required',
+                'image1' => 'image|mimes:jpg,jpeg|max:20000',
+                'image2' => 'image|mimes:jpg,jpeg|max:20000',
+                'image3' => 'image|mimes:jpg,jpeg|max:20000',
+                'image4' => 'image|mimes:jpg,jpeg|max:20000',
+                'image5' => 'image|mimes:jpg,jpeg|max:20000',
+                'image6' => 'image|mimes:jpg,jpeg|max:20000',
+                'image7' => 'image|mimes:jpg,jpeg|max:20000',
+                'image8' => 'image|mimes:jpg,jpeg|max:20000',
+                'image9' => 'image|mimes:jpg,jpeg|max:20000',
+                'image10' => 'image|mimes:jpg,jpeg|max:20000',
+                'image11' => 'image|mimes:jpg,jpeg|max:20000',
 
             ]
         );
@@ -280,6 +286,8 @@ class ComplexController extends Controller
 
         $data = [
             'name' => $request->name,
+            'area_ru' => $request->area_ru,
+            'area_en' => $request->area_en,
             'desc1_ru' => $request->desc1_ru,
             'desc1_en' => $request->desc1_en,
             'desc2_ru' => $request->desc2_ru,

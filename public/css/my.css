@@ -71,6 +71,7 @@
 
 .complex__content__text {
    font-size: 20px;
+   margin-top: 20px;
    flex-grow: 1;
 }
 
@@ -268,7 +269,6 @@
 
    .complex__content__text {
       font-size: 14px;
-      margin-top: 16px;
       width: 100%;
    }
 
@@ -280,4 +280,10 @@
       padding: 15px 20px;
    }
 
+}
+
+.result-img {
+   object-fit: cover;
+   height: 200px;
+   width: 100%;
 }

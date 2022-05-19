@@ -21,107 +21,76 @@
                         </ul>
                     </div>
                 @endif
-                <form action="{{ route('admin.complexes.update', $complex->id) }}" method="POST"
-                    enctype="multipart/form-data">
+                <form action="{{ route('admin.flats.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    @method('PUT')
-                    <div class="card-header">{{ __('Новый комплекс') }}</div>
+                    <div class="card-header">{{ __('Новая квартира') }}</div>
                     <div class="card-body">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">
-                                Название
+                        <div class="mb-3 w-25">
+                            <label for="complex" class="form-label">
+                                Выберите ЖК:
                             </label>
-                            <input type="text" class="form-control" id="name" name="name"
-                                placeholder=" {{ __('Название комплекса') }}" value="{{ $complex->name }}">
+                            <select type="text" class="" id="complex" name="complex">
+                                @foreach ($complexes as $complex)
+                                    <option value="{{ $complex->id }}">{{ $complex->name }}</option>
+                                @endforeach
+                            </select>
                         </div>
-                        <div class="mb-3">
-                            <label for="area_ru" class="form-label">
-                                Название района (рус)
-                            </label>
-                            <input type="text" class="form-control" id="area_ru" name="area_ru"
-                                placeholder=" {{ __('Название района (рус)') }}" value="{{ $complex->area_ru }}">
-                        </div>
-                        <div class="mb-3">
-                            <label for="area_en" class="form-label">
-                                Название района (eng)
-                            </label>
-                            <input type="text" class="form-control" id="area_en" name="area_en"
-                                placeholder=" {{ __('Название района (eng)') }}" value="{{ $complex->area_en }}">
-                        </div>
-
+                        <label for="price">Стоимость в Евро</label>
+                        <input class="form-control mb-3" type="text" name="price" id="price">
+                        <label for="square">Площадь</label>
+                        <input class="form-control mb-3" type="text" name="square" id="square">
+                        <label for="flat_ru">Тип квартиры (рус):</label>
+                        <input class="form-control mb-3" type="text" name="flat_ru" id="flat_ru">
+                        <label for="flat_en">Тип квартиры (eng):</label>
+                        <input class="form-control mb-3" type="text" name="flat_en" id="flat_en">
                         <div class="mb-3">
                             <label for="desc1_ru" class="form-label">
                                 {{ __('Описание 1 на русском') }}
                             </label>
-                            <textarea class="form-control" id="complex-textarea1" name="desc1_ru" rows="5">{{ $complex->desc1_ru }}</textarea>
+                            <textarea class="form-control" id="complex-textarea1" name="desc1_ru" rows="5"></textarea>
                         </div>
                         <div class="mb-3">
                             <label for="desc1_en" class="form-label">
                                 {{ __('Описание 1 на английском') }}
                             </label>
-                            <textarea class="form-control" id="complex-textarea2" name="desc1_en" rows="5">{{ $complex->desc1_en }}</textarea>
+                            <textarea class="form-control" id="complex-textarea2" name="desc1_en" rows="5"></textarea>
                         </div>
                         <div class="mb-3">
                             <label for="desc2_ru" class="form-label">
                                 {{ __('Описание 2 на русском') }}
                             </label>
-                            <textarea class="form-control" id="complex-textarea3" name="desc2_ru" rows="5">{{ $complex->desc2_ru }}</textarea>
+                            <textarea class="form-control" id="complex-textarea3" name="desc2_ru" rows="5"></textarea>
                         </div>
                         <div class="mb-3">
                             <label for="desc2_en" class="form-label">
                                 {{ __('Описание 2 на английском') }}
                             </label>
-                            <textarea class="form-control" id="complex-textarea4" name="desc2_en" rows="5">{{ $complex->desc2_en }}</textarea>
+                            <textarea class="form-control" id="complex-textarea4" name="desc2_en" rows="5"></textarea>
                         </div>
                         <div class="mb-3">
                             <label for="desc3_ru" class="form-label">
                                 {{ __('Описание 3 на русском') }}
                             </label>
-                            <textarea class="form-control" id="complex-textarea5" name="desc3_ru" rows="5">{{ $complex->desc3_ru }}</textarea>
+                            <textarea class="form-control" id="complex-textarea5" name="desc3_ru" rows="5"></textarea>
                         </div>
                         <div class="mb-3">
                             <label for="desc3_en" class="form-label">
                                 {{ __('Описание 3 на английском') }}
                             </label>
-                            <textarea class="form-control" id="complex-textarea6" name="desc3_en" rows="5">{{ $complex->desc3_en }}</textarea>
+                            <textarea class="form-control" id="complex-textarea6" name="desc3_en" rows="5"></textarea>
                         </div>
                         <div class="mb-3">
                             <label for="description" class="form-label">
                                 {{ __('Описание 4 на русском') }}
                             </label>
-                            <textarea class="form-control" id="complex-textarea7" name="desc4_ru" rows="5">{{ $complex->desc4_ru }}</textarea>
+                            <textarea class="form-control" id="complex-textarea7" name="desc4_ru" rows="5"></textarea>
                         </div>
                         <div class="mb-3">
                             <label for="description" class="form-label">
                                 {{ __('Описание 4 на английском') }}
                             </label>
-                            <textarea class="form-control" id="complex-textarea8" name="desc4_en" rows="5">{{ $complex->desc4_en }}</textarea>
+                            <textarea class="form-control" id="complex-textarea8" name="desc4_en" rows="5"></textarea>
                         </div>
-                        <div class="mb-3">
-                            <label for="description" class="form-label">
-                                {{ __('Описание 5 на русском') }}
-                            </label>
-                            <textarea class="form-control" id="complex-textarea9" name="desc5_ru" rows="5">{{ $complex->desc5_ru }}</textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="description" class="form-label">
-                                {{ __('Описание 5 на английском') }}
-                            </label>
-                            <textarea class="form-control" id="complex-textarea10" name="desc5_en" rows="5">{{ $complex->desc5_en }}</textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="description" class="form-label">
-                                {{ __('Описание 6 на русском') }}
-                            </label>
-                            <textarea class="form-control" id="complex-textarea11" name="desc6_ru" rows="5">{{ $complex->desc6_ru }}</textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="description" class="form-label">
-                                {{ __('Описание 6 на английском') }}
-                            </label>
-                            <textarea class="form-control" id="complex-textarea12" name="desc6_en" rows="5">{{ $complex->desc6_en }}</textarea>
-                        </div>
-
 
 
                         <div class="form-group">
@@ -164,85 +133,30 @@
                             <label>{{ __('Фото 10') }}</label>
                             <input type="file" name="image10" class="form-control">
                         </div>
-                        <div class="form-group">
-                            <label>{{ __('Фото 11') }}</label>
-                            <input type="file" name="image11" class="form-control">
-                        </div>
-                        @php
-                            $pros = [
-                                'volleyball' => 'Волейбольная площадка',
-                                'wifi' => 'Беспроводной интернет',
-                                'billiards' => 'Бильярд',
-                                'cafe' => 'Кафе/Ресторан',
-                                'generator' => 'Электрогенератор',
-                                'shuttle' => 'Шатл до пляжа',
-                                'garden' => 'Зеленый сад',
-                                'finnish_sauna' => 'Финская сауна',
-                                'jacuzzi' => 'Джакузи',
-                                'playground' => 'Детская площадка',
-                                'own_beach' => 'Собственный пляж',
-                                'bar_pool' => 'Бар у бассейна',
-                                'mini_club' => 'Мини-клуб',
-                                'video_observation' => 'Видеонаблюдение 24/7',
-                                'aquapark' => 'Аквапарк',
-                                'table_tennis' => 'Настольный теннис',
-                                'security' => 'Круглосуточная охрана',
-                                'indoor_pool' => 'Закрытый бассейн',
-                                'roman_sauna' => 'Римская парная',
-                                'tennis_court' => 'Теннисный корт',
-                                'satellite' => 'Спутниковое ТВ',
-                                'fitness' => 'Фитнес-центр',
-                                'conference' => 'Конференц-зал',
-                                'walking_paths' => 'Прогулочные дорожки',
-                                'market' => 'Маркет',
-                                'hairdresser' => 'Парикмахерская',
-                                'outdoor_parking' => 'Открытая парковка',
-                                'hamam' => 'Турецкий хамам',
-                                'game_room' => 'Игровая комната',
-                                'pavilions' => 'Беседки для отдыха',
-                                'child_pool' => 'Детский бассейн',
-                                'indoor_parking' => 'Крытая парковка',
-                                'bbq_area' => 'Зоны отдыха и барбекю',
-                                'basketball' => 'Баскетбольная площадка',
-                                'amphitheater' => 'Амфитеатр',
-                                'bowling' => 'Боулинг',
-                                'concierge' => 'Консьерж',
-                                'ice_rink' => 'Ледяной каток',
-                                'massage_room' => 'Массажные кабинеты',
-                                'outdoor_pool' => 'Открытый бассейн',
-                            ];
-                        @endphp
 
-                        <div class="three-columns">
-                            @foreach ($pros as $pro => $proname)
-                                <div>
-                                    <input type="checkbox" @if ($complex->{$pro} == 1) checked @endif
-                                        name="{{ $pro }}" value=1 id="{{ $pro }}">
-                                    <label for="{{ $pro }}">{{ $proname }}</label>
-                                </div>
-                            @endforeach
-                        </div>
+
                         {{-- <div class="mb-3">
                             <label for="pros_1" class="form-label">
                                 Доп. преимущество 1
                             </label>
                             <input type="text" class="form-control" id="pros_1" name="pros_1"
-                                placeholder="{{ __('Доп. преимущество 1') }}" value="{{ $complex->pros_1 }}">
+                                placeholder="{{ __('Доп. преимущество 1') }}">
                         </div>
                         <div class="mb-3">
                             <label for="pros_2" class="form-label">
                                 Доп. преимущество 2
                             </label>
                             <input type="text" class="form-control" id="pros_2" name="pros_2"
-                                placeholder="{{ __('Доп. преимущество 2') }}" value="{{ $complex->pros_2 }}">
+                                placeholder="{{ __('Доп. преимущество 2') }}">
                         </div>
                         <div class="mb-3">
                             <label for="pros_3" class="form-label">
                                 Доп. преимущество 3
                             </label>
                             <input type="text" class="form-control" id="pros_3" name="pros_3"
-                                placeholder="{{ __('Доп. преимущество 3') }}" value="{{ $complex->pros_3 }}">
+                                placeholder="{{ __('Доп. преимущество 3') }}">
                         </div> --}}
+
 
 
                     </div>

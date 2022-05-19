@@ -24,6 +24,10 @@ class CreateFlatsTable extends Migration
             $table->text('desc2_en')->nullable();
             $table->text('desc3_en')->nullable();
             $table->text('desc4_en')->nullable();
+            $table->integer('price');
+            $table->integer('square');
+            $table->string('flat_ru');
+            $table->string('flat_en');
             $table->string('image1')->nullable();
             $table->string('image2')->nullable();
             $table->string('image3')->nullable();

@@ -27,10 +27,24 @@
                     <div class="card-body">
                         <div class="mb-3">
                             <label for="name" class="form-label">
-                                Название
+                                Название комплекса
                             </label>
                             <input type="text" class="form-control" id="name" name="name"
                                 placeholder=" {{ __('Название комплекса') }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="area_ru" class="form-label">
+                                Название района (рус)
+                            </label>
+                            <input type="text" class="form-control" id="area_ru" name="area_ru"
+                                placeholder=" {{ __('Название района (рус)') }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="area_en" class="form-label">
+                                Название района (eng)
+                            </label>
+                            <input type="text" class="form-control" id="area_en" name="area_en"
+                                placeholder=" {{ __('Название района (eng)') }}">
                         </div>
 
                         <div class="mb-3">
