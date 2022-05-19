@@ -1,7 +1,6 @@
 @extends('layouts.front')
 
-@section('style')
-@endsection
+
 
 @section('content')
     @php
