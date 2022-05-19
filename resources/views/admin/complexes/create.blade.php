@@ -206,7 +206,7 @@
                                 </div>
                             @endforeach
                         </div>
-                        <div class="mb-3">
+                        {{-- <div class="mb-3">
                             <label for="pros_1" class="form-label">
                                 Доп. преимущество 1
                             </label>
@@ -226,7 +226,7 @@
                             </label>
                             <input type="text" class="form-control" id="pros_3" name="pros_3"
                                 placeholder="{{ __('Доп. преимущество 3') }}">
-                        </div>
+                        </div> --}}
 
 
 

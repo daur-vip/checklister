@@ -3,6 +3,12 @@
 @section('content')
     @php
     $reverse = 1;
+
+    if (session()->get('locale') == null) {
+        session()->put('locale', app()->getLocale());
+    } else {
+        App::setLocale(session()->get('locale'));
+    }
     @endphp
     @foreach ($complexes as $complex)
         @php
@@ -10,9 +16,10 @@
         @endphp
         <div class="complexes">
             <div class="max-wrap complexes-wrap">
-                <div class="complex" @if ($reverse == 1) style="flex-direction: row-reverse" @endif>
-                    <div class="complex__image__div"><a href="#"><img class="complex__image" src="/{{ $complex->image1 }}"
-                                alt="Complex"></a></div>
+                <div class="complex"
+                    @if ($reverse == 1) style="@media (max-width: 767px) {flex-direction: row-reverse}" @endif>
+                    <div class="complex__image__div"><a href="{{ route('complex.show', $complex->id) }}"><img
+                                class="complex__image" src="/{{ $complex->image1 }}" alt="Complex"></a></div>
                     <div class="complex__content">
                         <div class="complex__content__title">
                             {{ $complex->name }}
@@ -22,8 +29,8 @@
                         </div>
 
                         <div class="complex__content__button">
-                            <a href="{{ route('complex.show', $complex->id) }}" class="complex__content__link">На страницу
-                                комплекса</a>
+                            <a href="{{ route('complex.show', $complex->id) }}"
+                                class="complex__content__link">@lang('На страницу комплекса')</a>
                         </div>
                     </div>
                 </div>

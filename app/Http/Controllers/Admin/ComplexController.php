@@ -93,6 +93,7 @@ class ComplexController extends Controller
             'indoor_pool' => 'Закрытый бассейн',
             'roman_sauna' => 'Римская парная',
             'tennis_court' => 'Теннисный корт',
+            'hairdresser' => 'Парикмахерская',
             'satellite' => 'Спутниковое ТВ',
             'fitness' => 'Фитнес-центр',
             'conference' => 'Конференц-зал',
@@ -231,7 +232,53 @@ class ComplexController extends Controller
             }
             $fullImagePaths[$i] = $fullImagePath;
         }
-        $complex->update([
+
+
+        $pros = [
+            'volleyball' => 'Волейбольная площадка',
+            'wifi' => 'Беспроводной интернет',
+            'billiards' => 'Бильярд',
+            'cafe' => 'Кафе/Ресторан',
+            'generator' => 'Электрогенератор',
+            'shuttle' => 'Шатл до пляжа',
+            'garden' => 'Зеленый сад',
+            'finnish_sauna' => 'Финская сауна',
+            'jacuzzi' => 'Джакузи',
+            'playground' => 'Детская площадка',
+            'own_beach' => 'Собственный пляж',
+            'bar_pool' => 'Бар у бассейна',
+            'mini_club' => 'Мини-клуб',
+            'video_observation' => 'Видеонаблюдение 24/7',
+            'aquapark' => 'Аквапарк',
+            'table_tennis' => 'Настольный теннис',
+            'security' => 'Круглосуточная охрана',
+            'indoor_pool' => 'Закрытый бассейн',
+            'roman_sauna' => 'Римская парная',
+            'tennis_court' => 'Теннисный корт',
+            'hairdresser' => 'Парикмахерская',
+            'satellite' => 'Спутниковое ТВ',
+            'fitness' => 'Фитнес-центр',
+            'conference' => 'Конференц-зал',
+            'walking_paths' => 'Прогулочные дорожки',
+            'market' => 'Маркет',
+            'outdoor_parking' => 'Открытая парковка',
+            'hamam' => 'Турецкий хамам',
+            'game_room' => 'Игровая комната',
+            'pavilions' => 'Беседки для отдыха',
+            'child_pool' => 'Детский бассейн',
+            'indoor_parking' => 'Крытая парковка',
+            'bbq_area' => 'Зоны отдыха и барбекю',
+            'basketball' => 'Баскетбольная площадка',
+            'amphitheater' => 'Амфитеатр',
+            'bowling' => 'Боулинг',
+            'concierge' => 'Консьерж',
+            'ice_rink' => 'Ледяной каток',
+            'massage_room' => 'Массажные кабинеты',
+            'outdoor_pool' => 'Открытый бассейн',
+        ];
+
+
+        $data = [
             'name' => $request->name,
             'desc1_ru' => $request->desc1_ru,
             'desc1_en' => $request->desc1_en,
@@ -256,7 +303,23 @@ class ComplexController extends Controller
             'image9' => $fullImagePaths[9],
             'image10' => $fullImagePaths[10],
             'image11' => $fullImagePaths[11],
-        ]);
+        ];
+
+        foreach ($pros as $key => $value) {
+            if ($request->{$key} == null) {
+                $myNull = 0;
+            } else {
+                $myNull = 1;
+            }
+            $data[$key] = $myNull;
+        }
+
+        // $data['pros_1'] = $request->pros_1;
+        // $data['pros_2'] = $request->pros_2;
+        // $data['pros_3'] = $request->pros_3;
+
+
+        $complex->update($data);
         return Redirect()->back()->with('success', 'Complex updated successfully');
     }
 

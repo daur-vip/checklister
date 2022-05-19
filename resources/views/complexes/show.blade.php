@@ -1,8 +1,17 @@
 @extends('layouts.front')
 
 @section('content')
-    <section class="slider" style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../{{ $complex->image1 }});    background-size: cover;
-                                                                                           background-position: center;">
+    @php
+
+    if (session()->get('locale') == null) {
+        session()->put('locale', app()->getLocale());
+    } else {
+        App::setLocale(session()->get('locale'));
+    }
+    @endphp
+    <section class="slider"
+        style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../{{ $complex->image1 }});    background-size: cover;
+                                                                                                       background-position: center;">
         <div class="gallery inviz">
             <a href="/{{ $complex->image1 }}" class="big" rel="rel1"><img src="/{{ $complex->image1 }}"
                     alt="Complex 1"></a>
@@ -24,18 +33,19 @@
             </div>
             <div class="about-1-image gallery">
 
-                <a href="/{{ $complex->image2 }}" class="big" rel="rel1"><img src="/{{ $complex->image2 }}"
-                        alt="Complex 2"></a>
+                <a href="/{{ $complex->image2 }}" class="big" rel="rel1"><img class="image-fit"
+                        src="/{{ $complex->image2 }}" alt="Complex 2"></a>
 
             </div>
         </div>
     </section>
 
     <section class="about-2">
-        <div class="about-2-bg" style="background-image: url(../{{ $complex->image3 }});
-                                                                                           background-size: cover;
-                                                                                           background-repeat: no-repeat;
-                                                                                           background-position: center;">
+        <div class="about-2-bg"
+            style="background-image: url(../{{ $complex->image3 }});
+                                                                                                       background-size: cover;
+                                                                                                       background-repeat: no-repeat;
+                                                                                                       background-position: center;">
         </div>
         <div class="gallery inviz">
             <a href="/{{ $complex->image3 }}" class="big" rel="rel1"><img src="/{{ $complex->image3 }}"
@@ -111,10 +121,11 @@
             <a href="/{{ $complex->image11 }}" class="big" rel="rel1"><img src="/{{ $complex->image11 }}"
                     alt="Complex 1"></a>
         </div>
-        <div class="about-5-bg" style="background-image: url(/{{ $complex->image11 }});
-                                                                                           background-size: cover;
-                                                                                           background-repeat: no-repeat;
-                                                                                           background-position: center;">
+        <div class="about-5-bg"
+            style="background-image: url(/{{ $complex->image11 }});
+                                                                                                       background-size: cover;
+                                                                                                       background-repeat: no-repeat;
+                                                                                                       background-position: center;">
         </div>
         <div class="about-5-wrap">
             <div class="about-5-item">

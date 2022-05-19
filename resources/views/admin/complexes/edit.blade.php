@@ -154,6 +154,81 @@
                             <label>{{ __('Фото 11') }}</label>
                             <input type="file" name="image11" class="form-control">
                         </div>
+                        @php
+                            $pros = [
+                                'volleyball' => 'Волейбольная площадка',
+                                'wifi' => 'Беспроводной интернет',
+                                'billiards' => 'Бильярд',
+                                'cafe' => 'Кафе/Ресторан',
+                                'generator' => 'Электрогенератор',
+                                'shuttle' => 'Шатл до пляжа',
+                                'garden' => 'Зеленый сад',
+                                'finnish_sauna' => 'Финская сауна',
+                                'jacuzzi' => 'Джакузи',
+                                'playground' => 'Детская площадка',
+                                'own_beach' => 'Собственный пляж',
+                                'bar_pool' => 'Бар у бассейна',
+                                'mini_club' => 'Мини-клуб',
+                                'video_observation' => 'Видеонаблюдение 24/7',
+                                'aquapark' => 'Аквапарк',
+                                'table_tennis' => 'Настольный теннис',
+                                'security' => 'Круглосуточная охрана',
+                                'indoor_pool' => 'Закрытый бассейн',
+                                'roman_sauna' => 'Римская парная',
+                                'tennis_court' => 'Теннисный корт',
+                                'satellite' => 'Спутниковое ТВ',
+                                'fitness' => 'Фитнес-центр',
+                                'conference' => 'Конференц-зал',
+                                'walking_paths' => 'Прогулочные дорожки',
+                                'market' => 'Маркет',
+                                'hairdresser' => 'Парикмахерская',
+                                'outdoor_parking' => 'Открытая парковка',
+                                'hamam' => 'Турецкий хамам',
+                                'game_room' => 'Игровая комната',
+                                'pavilions' => 'Беседки для отдыха',
+                                'child_pool' => 'Детский бассейн',
+                                'indoor_parking' => 'Крытая парковка',
+                                'bbq_area' => 'Зоны отдыха и барбекю',
+                                'basketball' => 'Баскетбольная площадка',
+                                'amphitheater' => 'Амфитеатр',
+                                'bowling' => 'Боулинг',
+                                'concierge' => 'Консьерж',
+                                'ice_rink' => 'Ледяной каток',
+                                'massage_room' => 'Массажные кабинеты',
+                                'outdoor_pool' => 'Открытый бассейн',
+                            ];
+                        @endphp
+
+                        <div class="three-columns">
+                            @foreach ($pros as $pro => $proname)
+                                <div>
+                                    <input type="checkbox" @if ($complex->{$pro} == 1) checked @endif
+                                        name="{{ $pro }}" value=1 id="{{ $pro }}">
+                                    <label for="{{ $pro }}">{{ $proname }}</label>
+                                </div>
+                            @endforeach
+                        </div>
+                        {{-- <div class="mb-3">
+                            <label for="pros_1" class="form-label">
+                                Доп. преимущество 1
+                            </label>
+                            <input type="text" class="form-control" id="pros_1" name="pros_1"
+                                placeholder="{{ __('Доп. преимущество 1') }}" value="{{ $complex->pros_1 }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="pros_2" class="form-label">
+                                Доп. преимущество 2
+                            </label>
+                            <input type="text" class="form-control" id="pros_2" name="pros_2"
+                                placeholder="{{ __('Доп. преимущество 2') }}" value="{{ $complex->pros_2 }}">
+                        </div>
+                        <div class="mb-3">
+                            <label for="pros_3" class="form-label">
+                                Доп. преимущество 3
+                            </label>
+                            <input type="text" class="form-control" id="pros_3" name="pros_3"
+                                placeholder="{{ __('Доп. преимущество 3') }}" value="{{ $complex->pros_3 }}">
+                        </div> --}}
 
 
                     </div>

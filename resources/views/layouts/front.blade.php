@@ -16,6 +16,15 @@
         rel="stylesheet">
 </head>
 
+@php
+if (session()->get('locale') == null) {
+    session()->put('locale', app()->getLocale());
+} else {
+    App::setLocale(session()->get('locale'));
+}
+@endphp
+
+
 <body>
     <div class="mobile-menu">
         <div class="container">
@@ -45,11 +54,11 @@
                     </div>
                     <ul class="header__list">
                         <li><a href="#" class="header__link">{{ __('О нас') }}</a></li>
-                        <li><a href="#" class="header__link">Комплексы</a></li>
-                        <li><a href="#flats" class="header__link">Каталог</a></li>
-                        <li><a href="#services" class="header__link">Услуги</a></li>
-                        <li><a href="#" class="header__link">СМИ о нас</a></li>
-                        <li><a href="#footer" class="header__link">Контакты</a></li>
+                        <li><a href="/complex" class="header__link">{{ __('Комплексы') }}</a></li>
+                        <li><a href="#flats" class="header__link">{{ __('Новости') }}</a></li>
+                        <li><a href="#services" class="header__link">{{ __('Услуги') }}</a></li>
+                        <li><a href="#" class="header__link">{{ __('СМИ о нас') }}</a></li>
+                        <li><a href="#footer" class="header__link">{{ __('Контакты') }}</a></li>
                     </ul>
                 </nav>
             </div>
@@ -61,21 +70,21 @@
             <div class="header-left">
                 <div class="header-contact">
                     <img class="header-flag" src="/img/flag-turkey.svg" alt="Turkey phone">
-                    <span class="header-coutry">Турция</span><br>
+                    <span class="header-coutry">{{ __('Турция') }} {{ session()->get('locale') }}</span><br>
                     <a class="header-phone" href="tel:+905348268407">+905348268407</a>
                 </div>
                 <div class="header-contact">
                     <img class="header-flag" src="/img/flag-kz.svg" alt="KZ phone">
-                    <span class="header-coutry">Казахстан</span><br>
+                    <span class="header-coutry">{{ __('Kazakhstan') }}</span><br>
                     <a class="header-phone" href="tel:+77777071234">+77777071234</a>
                 </div>
             </div>
             <div class="header-right">
                 <div class="header-languages">
-                    <a class="header-language" href="#">
+                    <a class="header-language" href="{{ route('changeLang') . '?lang=ru' }}">
                         <img class="header-flag header-flag--ru" src="/img/flag-ru.svg" alt="RU"> рус
                     </a>
-                    <a class="header-language" href="#">
+                    <a class="header-language" href="{{ route('changeLang') . '?lang=en' }}">
                         <img class="header-flag" src="/img/flag-uk.svg" alt="ENG"> en
                     </a>
                 </div>
@@ -95,25 +104,25 @@
             <div class="nav-center">
                 <ul class="nav-list">
                     <li>
-                        <a class="nav-item" href="#">О нас</a>
+                        <a class="nav-item" href="#">{{ __('О нас') }}</a>
                     </li>
                     <li>
-                        <a class="nav-item" href="/complex">Комплексы</a>
+                        <a class="nav-item" href="/complex">{{ __('Комплексы') }}</a>
                     </li>
                     <li>
-                        <a class="nav-item" href="#flats">Каталог</a>
+                        <a class="nav-item" href="#">{{ __('Новости') }}</a>
                     </li>
                     <li>
                         <a class="nav-item" href="#"><img src="/img/logo.svg" alt="Logo"></a>
                     </li>
                     <li>
-                        <a class="nav-item" href="#services">Услуги</a>
+                        <a class="nav-item" href="#services">{{ __('Услуги') }}</a>
                     </li>
                     <li>
-                        <a class="nav-item" href="#">СМИ о нас</a>
+                        <a class="nav-item" href="#">{{ __('СМИ о нас') }}</a>
                     </li>
                     <li>
-                        <a class="nav-item" href="#footer">Контакты</a>
+                        <a class="nav-item" href="#footer">{{ __('Контакты') }}</a>
                     </li>
 
                 </ul>
@@ -134,13 +143,14 @@
         <div class="max-wrap">
             <div class="footer-content">
                 <div class="footer-contact">
-                    <h3 class="footer-title">Связаться с нами</h3>
+                    <h3 class="footer-title">{{ __('Связаться с нами') }}</h3>
                     <div class="footer-contact-items">
                         <div class="footer-contact-item">
-                            <img class="footer-contact-item__image" src="/img/flag-kz.svg" alt="KZ">Казахстан
+                            <img class="footer-contact-item__image" src="/img/flag-kz.svg"
+                                alt="KZ">{{ __('Казахстан') }}
                         </div>
                         <div class="footer-contact-item"><img class="footer-contact-item__image"
-                                src="/img/flag-turkey.svg" alt="Turkey">Турция
+                                src="/img/flag-turkey.svg" alt="Turkey">{{ __('Турция') }}
                         </div>
                         <div class="footer-contact-item"><img class="footer-contact-item__image"
                                 src="/img/contacts-house.svg" alt="KZ">Borgo Penelope 1 Appartamento 84</div>
@@ -158,24 +168,24 @@
 
                 </div>
                 <div class="footer-nav">
-                    <h3 class="footer-title">Навигация</h3>
+                    <h3 class="footer-title">{{ __('Навигация') }}</h3>
                     <div class="footer-nav-items">
                         <div class="footer-nav-item">
-                            О нас
+                            {{ __('О нас') }}
                         </div>
                         <div class="footer-nav-item">
-                            Каталог
+                            {{ __('Комплексы') }}
                         </div>
                         <div class="footer-nav-item">
-                            Услуги
+                            {{ __('Услуги') }}
                         </div>
                         <div class="footer-nav-item">
-                            СМИ
+                            {{ __('СМИ о нас') }}
                         </div>
                     </div>
                 </div>
                 <div class="footer-socials">
-                    <h3 class="footer-title">Мы в соц. сетях</h3>
+                    <h3 class="footer-title">{{ __('Мы в соц. сетях') }}</h3>
                     <div class="footer-socials-icons">
                         <div class="footer-socials-icon">
                             <img src="/img/footer-socials-1.svg" alt="Whatsapp">

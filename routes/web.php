@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\ComplexController;
 use App\Http\Controllers\Admin\FlatController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\TaskController;
+use App\Http\Controllers\LangController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('lang/change', [LangController::class, 'change'])->name('changeLang');
 
 Route::resource('complex', App\Http\Controllers\ComplexController::class);
 
