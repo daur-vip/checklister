@@ -72,6 +72,12 @@
    color: #000;
 }
 
+@media(min-width: 768px) {
+   .isreverse {
+      flex-direction: row-reverse;
+   }
+}
+
 @media (min-width: 768px) and (max-width: 1366px) {
 
    .complex__content__title {
@@ -86,6 +92,7 @@
 
 
 @media (max-width: 767px) {
+
    .complexes-wrap {
       padding: 90px 20px 20px 20px;
    }

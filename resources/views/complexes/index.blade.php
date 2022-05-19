@@ -1,5 +1,8 @@
 @extends('layouts.front')
 
+@section('style')
+@endsection
+
 @section('content')
     @php
     $reverse = 1;
@@ -16,8 +19,7 @@
         @endphp
         <div class="complexes">
             <div class="max-wrap complexes-wrap">
-                <div class="complex"
-                    @if ($reverse == 1) style="@media (max-width: 767px) {flex-direction: row-reverse}" @endif>
+                <div class="complex @if ($reverse == 1) isreverse @endif">
                     <div class="complex__image__div"><a href="{{ route('complex.show', $complex->id) }}"><img
                                 class="complex__image" src="/{{ $complex->image1 }}" alt="Complex"></a></div>
                     <div class="complex__content">
