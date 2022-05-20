@@ -287,3 +287,78 @@
    height: 200px;
    width: 100%;
 }
+
+/* whatsapp */
+
+.dropdown-whatsapp {
+   position: relative;
+}
+
+
+.dropdown-content-whatsapp {
+   display: none;
+   position: absolute;
+   left: -90px;
+   background-color: #f1f1f1;
+   width: 200px;
+   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+   z-index: 6;
+}
+
+.dropdown-content-whatsapp a {
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: flex;
+}
+
+.dropdown-content-whatsapp p {
+   margin-left: 10px;
+}
+
+
+.dropdown-content-whatsapp a:hover {
+   background-color: #ddd;
+}
+
+.dropdown-whatsapp:hover .dropdown-content-whatsapp {
+   display: block;
+}
+
+
+/* whatsapp */
+
+.dropdown-telegram {
+   position: relative;
+}
+
+
+.dropdown-content-telegram {
+   display: none;
+   position: absolute;
+   left: -90px;
+   background-color: #f1f1f1;
+   width: 200px;
+   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+   z-index: 6;
+}
+
+.dropdown-content-telegram a {
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: flex;
+}
+
+.dropdown-content-telegram p {
+   margin-left: 10px;
+}
+
+
+.dropdown-content-telegram a:hover {
+   background-color: #ddd;
+}
+
+.dropdown-telegram:hover .dropdown-content-telegram {
+   display: block;
+}

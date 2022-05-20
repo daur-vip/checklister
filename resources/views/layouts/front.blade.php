@@ -105,7 +105,7 @@ if (session()->get('locale') == null) {
                 </div>
                 <div class="header-contact">
                     <img class="header-flag" src="/img/flag-kz.svg" alt="KZ phone">
-                    <span class="header-coutry">{{ __('Kazakhstan') }}</span><br>
+                    <span class="header-coutry">{{ __('Казахстан') }}</span><br>
                     <a class="header-phone" href="tel:+77777071234">+77777071234</a>
                 </div>
             </div>
@@ -119,10 +119,46 @@ if (session()->get('locale') == null) {
                     </a>
                 </div>
                 <div class="header-socials">
-                    <a class="header-language" href="#">
-                        <img class="header-flag" src="/img/socials-whatsapp.svg" alt="Whatsapp"></a>
-                    <a class="header-language" href="#">
-                        <img class="header-flag" src="/img/socials-tiktok.svg" alt="TikTok"></a>
+                    <div class="dropdown-whatsapp">
+                        <img class="header-flag dropbtn-whatsapp" src="/img/socials-whatsapp.svg" alt="Whatsapp">
+                        <div class="dropdown-content-whatsapp">
+                            <a
+                                href="https://wa.me/77777071234?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C+%D1%85%D0%BE%D1%87%D1%83+%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C+%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E+%D0%BF%D0%BE+%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8+%D0%B2+%D0%A2%D1%83%D1%80%D1%86%D0%B8%D0%B8."><img
+                                    src="/img/flag-kz.svg" alt="">
+                                <p>+7 777 707 1234</p>
+                            </a>
+                            <a
+                                href="https://wa.me/905348268407?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C+%D1%85%D0%BE%D1%87%D1%83+%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C+%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E+%D0%BF%D0%BE+%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8+%D0%B2+%D0%A2%D1%83%D1%80%D1%86%D0%B8%D0%B8."><img
+                                    src="/img/flag-turkey.svg" alt="">
+                                <p>+90 534 826 8407</p>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="dropdown-telegram">
+                        <img class="header-flag dropbtn-telegram" src="/img/socials-telegram.svg" alt="Telegram">
+                        <div class="dropdown-content-telegram">
+                            <a href="https://t.me/myflatkz"><img src="/img/flag-kz.svg" alt="">
+                                <p>+7 777 707 1234</p>
+                            </a>
+                            <a href="https://t.me/myflatTR"><img src="/img/flag-turkey.svg" alt="">
+                                <p>+90 534 826 8407</p>
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="dropdown-telegram">
+                        <img class="header-flag dropbtn-telegram" src="/img/socials-viber.svg" alt="Telegram">
+                        <div class="dropdown-content-telegram">
+                            <a href="viber://add?number=77777071234"><img src="/img/flag-kz.svg" alt="">
+                                <p>+7 777 707 1234</p>
+                            </a>
+                            <a href="viber://add?number=905348268407"><img src="/img/flag-turkey.svg" alt="">
+                                <p>+90 534 826 8407</p>
+                            </a>
+
+                        </div>
+                    </div>
                     <a class="header-language" href="#">
                         <img class="header-flag" src="/img/socials-instagram.svg" alt="Instagram"></a>
                 </div>
