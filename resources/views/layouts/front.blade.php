@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
+    <title>MyFlat - {{ __('недвижимость в Турции') }}</title>
     <link href="/css/simple-lightbox.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link href="{{ asset('css/my.css') }}" rel="stylesheet">
@@ -60,14 +60,26 @@ if (session()->get('locale') == null) {
         <div class="container">
             <div class="header__body">
                 <a href="#" class="header__logo"><img src="/img/logo.svg" alt="Logo"></a>
-                <div class="mobile-socials">
-                    <a href="#"><img src="/img/footer-socials-1.svg" alt="Whatsapp"></a>
+                <div class="dropdown-telegram mobile-socials"><img class="dropbtn-telegram mobile-socials-mini"
+                        src="/img/footer-socials-1.svg" alt="Telegram">
+                    <div class="dropdown-content-telegram">
+                        <a target="_blank" href="https://t.me/myflatkz"><img src="/img/flag-kz.svg" alt="">
+                            <p>+7 777 707 1234</p>
+                        </a>
+                        <a target="_blank" href="https://t.me/myflatTR"><img src="/img/flag-turkey.svg" alt="">
+                            <p>+90 534 826 8407</p>
+                        </a>
+
+                    </div>
                 </div>
                 <div class="mobile-socials">
-                    <a href="#"><img src="/img/footer-socials-2.svg" alt="Whatsapp"></a>
+                    <a href="#"><img class="mobile-socials-mini" src="/img/footer-socials-1.svg" alt="Whatsapp"></a>
                 </div>
                 <div class="mobile-socials">
-                    <a href="#"><img src="/img/footer-socials-3.svg" alt="Whatsapp"></a>
+                    <a href="#"><img class="mobile-socials-mini" src="/img/footer-socials-2.svg" alt="Whatsapp"></a>
+                </div>
+                <div class="mobile-socials">
+                    <a href="#"><img class="mobile-socials-mini" src="/img/footer-socials-3.svg" alt="Whatsapp"></a>
                 </div>
                 <div class="header__burger">
                     <span></span>

@@ -330,6 +330,7 @@
 
 .dropdown-telegram {
    position: relative;
+   z-index: 7;
 }
 
 
@@ -361,4 +362,8 @@
 
 .dropdown-telegram:hover .dropdown-content-telegram {
    display: block;
+}
+
+.mobile-socials-mini {
+   height: 20px;
 }

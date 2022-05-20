@@ -25,6 +25,10 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
 Route::get('lang/change', [LangController::class, 'change'])->name('changeLang');
 
 Route::resource('complex', App\Http\Controllers\ComplexController::class);
