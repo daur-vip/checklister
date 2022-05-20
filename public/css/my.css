@@ -367,3 +367,12 @@
 .mobile-socials-mini {
    height: 20px;
 }
+
+legend {
+   float: none;
+   width: auto;
+   padding: 0;
+   margin-bottom: 0;
+   font-size: 10px;
+   line-height: inherit;
+}

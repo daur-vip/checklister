@@ -310,7 +310,7 @@ body {
 
 .slider-hr {
    color: #fff;
-   margin-top: 10px;
+   margin-top: 0px;
    width: 70%;
 }
 
@@ -320,6 +320,7 @@ body {
    line-height: 1.3em;
    text-align: center;
    color: #fff;
+   padding-bottom: 10px;
 }
 
 .slider-text {
@@ -328,7 +329,7 @@ body {
    font-weight: 400;
    font-size: 24px;
    line-height: 1.3em;
-   margin-bottom: 40px;
+   margin-bottom: 20px;
 }
 
 .slider-title--complex {
@@ -1154,6 +1155,7 @@ input:checked+label+.questions-content {
 
    .slider-content {
       padding-left: 0px;
+      padding-top: 30px;
    }
 
    .slider-title {
@@ -1163,6 +1165,7 @@ input:checked+label+.questions-content {
 
    .slider-text {
       padding: 0px 20px;
+      font-size: 18px;
    }
 
    .slider-text--complex {
@@ -1219,6 +1222,10 @@ input:checked+label+.questions-content {
       grid-template-columns: repeat(1, 90%);
       gap: 40px 10%;
       margin-top: 60px;
+   }
+
+   .post-services-title {
+      font-size: 24px;
    }
 
    .post-services {

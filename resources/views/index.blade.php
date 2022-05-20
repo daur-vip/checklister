@@ -14,8 +14,10 @@
                 {{ __('MY FLAT') }} -<br />
                 {{ __('недвижимость в Турции') }}
             </h1>
-            <hr class="slider-hr">
+
             <p class="slider-text">{{ __('Официальный представитель турецкого застройщика на территории СНГ') }}!</p>
+            <hr class="slider-hr">
+            <p class="slider-text">{{ __('Без комиссий! Без переплат!') }}</p>
             <button id="myBtn2" class="nav-contact-us">{{ __('Связаться с нами') }}</button>
         </div>
     </section>
