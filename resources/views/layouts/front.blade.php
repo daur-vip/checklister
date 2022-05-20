@@ -59,9 +59,25 @@ if (session()->get('locale') == null) {
     <div class="mobile-menu">
         <div class="container">
             <div class="header__body">
-                <a href="#" class="header__logo"><img src="/img/logo.svg" alt="Logo"></a>
+                <a href="/" class="header__logo"><img src="/img/logo.svg" alt="Logo"></a>
                 <div class="dropdown-telegram mobile-socials"><img class="dropbtn-telegram mobile-socials-mini"
-                        src="/img/footer-socials-1.svg" alt="Telegram">
+                        src="/img/socials-whatsapp-grey.svg" alt="Telegram">
+                    <div class="dropdown-content-telegram">
+                        <a target="_blank"
+                            href="https://wa.me/77777071234?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C+%D1%85%D0%BE%D1%87%D1%83+%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C+%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E+%D0%BF%D0%BE+%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8+%D0%B2+%D0%A2%D1%83%D1%80%D1%86%D0%B8%D0%B8."><img
+                                src="/img/flag-kz.svg" alt="">
+                            <p>+7 777 707 1234</p>
+                        </a>
+                        <a target="_blank"
+                            href="https://wa.me/905348268407?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C+%D1%85%D0%BE%D1%87%D1%83+%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C+%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E+%D0%BF%D0%BE+%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8+%D0%B2+%D0%A2%D1%83%D1%80%D1%86%D0%B8%D0%B8."><img
+                                src="/img/flag-turkey.svg" alt="">
+                            <p>+90 534 826 8407</p>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="dropdown-telegram mobile-socials"><img class="dropbtn-telegram mobile-socials-mini"
+                        src="/img/socials-telegram-grey.svg" alt="Telegram">
                     <div class="dropdown-content-telegram">
                         <a target="_blank" href="https://t.me/myflatkz"><img src="/img/flag-kz.svg" alt="">
                             <p>+7 777 707 1234</p>
@@ -72,14 +88,23 @@ if (session()->get('locale') == null) {
 
                     </div>
                 </div>
-                <div class="mobile-socials">
-                    <a href="#"><img class="mobile-socials-mini" src="/img/footer-socials-1.svg" alt="Whatsapp"></a>
+                <div class="dropdown-telegram mobile-socials"><img class="dropbtn-telegram mobile-socials-mini"
+                        src="/img/socials-viber-grey.svg" alt="Telegram">
+                    <div class="dropdown-content-telegram">
+                        <a target="_blank" href="viber://add?number=77777071234"><img src="/img/flag-kz.svg" alt="">
+                            <p>+7 777 707 1234</p>
+                        </a>
+                        <a target="_blank" href="viber://add?number=905348268407"><img src="/img/flag-turkey.svg"
+                                alt="">
+                            <p>+90 534 826 8407</p>
+                        </a>
+
+                    </div>
                 </div>
+
                 <div class="mobile-socials">
-                    <a href="#"><img class="mobile-socials-mini" src="/img/footer-socials-2.svg" alt="Whatsapp"></a>
-                </div>
-                <div class="mobile-socials">
-                    <a href="#"><img class="mobile-socials-mini" src="/img/footer-socials-3.svg" alt="Whatsapp"></a>
+                    <a target="_blank" href="https://instagram.com/myflat.kz"><img class="mobile-socials-mini"
+                            src="/img/footer-socials-3.svg" alt="Instagram"></a>
                 </div>
                 <div class="header__burger">
                     <span></span>
@@ -172,7 +197,7 @@ if (session()->get('locale') == null) {
 
                         </div>
                     </div>
-                    <a class="header-language" href="https://instagram.com/myflat.kz">
+                    <a target="_blank" class="header-language" href="https://instagram.com/myflat.kz">
                         <img class="header-flag" src="/img/socials-instagram.svg" alt="Instagram"></a>
                 </div>
             </div>
