@@ -11,11 +11,11 @@
     <section class="slider">
         <div class="slider-content">
             <h1 class="slider-title">
-                МY FLAT -<br />
-                недвижимость в Турции
+                {{ __('MY FLAT') }} -<br />
+                {{ __('недвижимость в Турции') }}
             </h1>
             <hr class="slider-hr">
-            <p class="slider-text">Отличное решение для комфортной жизни и выгодного инвестирования!</p>
+            <p class="slider-text">{{ __('Отличное решение для комфортной жизни и выгодного инвестирования') }}!</p>
             <button id="myBtn2" class="nav-contact-us">{{ __('Связаться с нами') }}</button>
         </div>
     </section>
@@ -24,38 +24,35 @@
     <section id="services" class="services smt">
         <div class="services-header">
             <h2 class="services-header-text">
-                Наши услуги
+                {{ __('Наши услуги') }}
             </h2>
         </div>
         <div class="services-content">
             <div class="max-wrap services-wrap">
                 <div class="services-item-wrap">
                     <h3 class="services-item-title">
-                        Онлайн покупка недвижимости
+                        {{ __('Онлайн консультация и подбор недвижимости') }}
                     </h3>
                     <div class="services-item services-item--1">
                     </div>
                 </div>
                 <div class="services-item-wrap">
                     <h3 class="services-item-title">
-                        Консультация и подбор
-                        недвижимости
+                        {{ __('Ознакомительный тур') }}
                     </h3>
                     <div class="services-item services-item--2">
                     </div>
                 </div>
                 <div class="services-item-wrap">
                     <h3 class="services-item-title">
-                        Организация тура
-                        для клиентов
+                        {{ __('Полное юридическое сопровождение') }}
                     </h3>
                     <div class="services-item services-item--3">
                     </div>
                 </div>
                 <div class="services-item-wrap">
                     <h3 class="services-item-title">
-                        Безопасный перевод
-                        денег
+                        {{ __('Безопасный перевод денежных средств') }}
                     </h3>
                     <div class="services-item services-item--4">
                     </div>
