@@ -159,7 +159,7 @@ if (session()->get('locale') == null) {
 
                         </div>
                     </div>
-                    <a class="header-language" href="#">
+                    <a class="header-language" href="https://instagram.com/myflat.kz">
                         <img class="header-flag" src="/img/socials-instagram.svg" alt="Instagram"></a>
                 </div>
             </div>
@@ -176,13 +176,13 @@ if (session()->get('locale') == null) {
                         <a class="nav-item" href="/complex">{{ __('Комплексы') }}</a>
                     </li>
                     <li>
-                        <a class="nav-item" href="#">{{ __('Новости') }}</a>
+                        <a class="nav-item" href="#services">{{ __('Услуги') }}</a>
                     </li>
                     <li>
                         <a class="nav-item" href="/"><img src="/img/logo.svg" alt="Logo"></a>
                     </li>
                     <li>
-                        <a class="nav-item" href="#services">{{ __('Услуги') }}</a>
+                        <a class="nav-item" href="#">{{ __('Новости') }}</a>
                     </li>
                     <li>
                         <a class="nav-item" href="#">{{ __('СМИ о нас') }}</a>
