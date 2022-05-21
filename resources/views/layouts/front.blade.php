@@ -112,15 +112,15 @@ if (session()->get('locale') == null) {
 
                 <nav class="header__menu">
                     <div class="header-languages-mobile">
-                        <a class="header-language" href="#">
+                        <a class="header-language" href="{{ route('changeLang') . '?lang=ru' }}">
                             <img class="header-flag-mobile header-flag--ru" src="/img/flag-ru.svg" alt="RU">
                         </a>
-                        <a class="header-language" href="#">
+                        <a class="header-language" href="{{ route('changeLang') . '?lang=en' }}">
                             <img class="header-flag-mobile" src="/img/flag-uk.svg" alt="ENG">
                         </a>
                     </div>
                     <ul class="header__list">
-                        <li><a href="#" class="header__link">{{ __('О нас') }}</a></li>
+                        <li><a href="/about" class="header__link">{{ __('О нас') }}</a></li>
                         <li><a href="/complex" class="header__link">{{ __('Комплексы') }}</a></li>
                         <li><a href="#flats" class="header__link">{{ __('Новости') }}</a></li>
                         <li><a href="#services" class="header__link">{{ __('Услуги') }}</a></li>
@@ -208,7 +208,7 @@ if (session()->get('locale') == null) {
             <div class="nav-center">
                 <ul class="nav-list">
                     <li>
-                        <a class="nav-item" href="#">{{ __('О нас') }}</a>
+                        <a class="nav-item" href="/about">{{ __('О нас') }}</a>
                     </li>
                     <li>
                         <a class="nav-item" href="/complex">{{ __('Комплексы') }}</a>

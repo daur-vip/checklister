@@ -302,6 +302,7 @@ body {
    flex-direction: column;
    align-items: center;
    max-width: 1300px;
+   padding: 0px 15px 0px;
 }
 
 .slider-content--complex {
@@ -334,6 +335,11 @@ body {
 
 .slider-title--complex {
    text-transform: uppercase;
+}
+
+.slider-text--author {
+   width: 100%;
+   font-weight: 600;
 }
 
 .slider-text--complex {
@@ -864,9 +870,9 @@ input:checked+label+.questions-content {
    align-items: center;
    text-align: center;
    padding: 10px 20%;
-   font-weight: 600;
-   font-size: 32px;
-   line-height: 38px;
+   font-weight: 500;
+   font-size: 24px;
+   line-height: 1.4em;
    color: #ffffff;
 }
 
@@ -888,6 +894,19 @@ input:checked+label+.questions-content {
    float: left;
 }
 
+.complex-triangles-left-blue {
+   height: 100px;
+   left: 0;
+   margin: auto;
+   position: absolute;
+   right: 0;
+   background: linear-gradient(to bottom left, transparent,
+         transparent 50%,
+         #141b2d 51%,
+         #141b2d);
+   float: left;
+}
+
 .complex-triangles-right {
    height: 100px;
    left: 0;
@@ -895,6 +914,19 @@ input:checked+label+.questions-content {
    position: absolute;
    right: 0;
    background: linear-gradient(to bottom right, transparent, transparent 50%, #fff 51%, #fff);
+   float: right;
+}
+
+.complex-triangles-right-blue {
+   height: 100px;
+   left: 0;
+   margin: auto;
+   position: absolute;
+   right: 0;
+   background: linear-gradient(to bottom right, transparent,
+         transparent 50%,
+         #141b2d 51%,
+         #141b2d);
    float: right;
 }
 
@@ -956,7 +988,7 @@ input:checked+label+.questions-content {
 }
 
 .about-4-right__img {
-   max-width: 280px;
+   width: 280px;
    height: 280px;
    object-fit: cover;
 }
@@ -1160,7 +1192,7 @@ input:checked+label+.questions-content {
 
    .slider-title {
       font-size: 28px;
-      padding: 0px 0px;
+      padding: 0px 0px 10px;
    }
 
    .slider-text {
@@ -1171,6 +1203,11 @@ input:checked+label+.questions-content {
    .slider-text--complex {
       width: 100%;
       font-size: 16px;
+   }
+
+   .slider-text--author {
+      width: 100%;
+      font-weight: 600;
    }
 
    .services-item-wrap {
