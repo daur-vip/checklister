@@ -8,7 +8,6 @@
 
 
         @if (auth()->user()->is_admin)
-
             <li class="nav-title">{{ __('Admin') }}</li>
             <li class="nav-group">
                 <a class="nav-link" href="{{ route('admin.complexes.index') }}">
@@ -28,11 +27,11 @@
                 <a class="nav-link" href="{{ route('admin.pages.index') }}">
                     <svg class="nav-icon">
                         <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-puzzle') }}"></use>
-                    </svg>{{ __('Pages') }}
+                    </svg>{{ __('News') }}
                 </a>
             </li>
 
-            <li class="nav-title">{{ __('Manage Checklists') }}</li>
+            {{-- <li class="nav-title">{{ __('Manage Checklists') }}</li>
             @foreach (App\Models\ChecklistGroup::with('checklists')->get() as $group)
                 <li class="nav-group show" aria-expanded="true">
                     <a class="nav-link" href="{{ route('admin.checklist_groups.edit', $group->id) }}">
@@ -81,9 +80,7 @@
                     <li class="nav-item"><a class="nav-link" href="buttons/dropdowns.html"><span
                                 class="nav-icon"></span> Dropdowns</a></li>
                 </ul>
-            </li>
-
-
+            </li> --}}
         @endif
 
         <li class="nav-item">

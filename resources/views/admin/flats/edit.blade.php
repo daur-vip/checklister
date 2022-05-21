@@ -37,18 +37,44 @@
                                 @endforeach
                             </select>
                         </div>
-                        <label for="price">Стоимость в Евро</label>
-                        <input class="form-control mb-3" type="text" name="price" id="price" value="{{ $flat->price }}">
+                        <label for="price_euro">Стоимость в Евро</label>
+                        <input class="form-control mb-3" type="text" name="price_euro" id="price_euro"
+                            value="{{ old('price_euro', $flat->price_euro) }}">
+                        <label for="price_dollar">Стоимость в Долларах</label>
+                        <input class="form-control mb-3" type="text" name="price_dollar" id="price_dollar"
+                            value="{{ old('price_dollar', $flat->price_dollar) }}">
+                        <label for="price_tenge">Стоимость в Тенге</label>
+                        <input class="form-control mb-3" type="text" name="price_tenge" id="price_tenge"
+                            value="{{ old('price_tenge', $flat->price_tenge) }}">
+
                         <label for="square">Площадь</label>
                         <input class="form-control mb-3" type="text" name="square" id="square"
-                            value="{{ $flat->square }}">
+                            value="{{ old('square', $flat->square) }}">
                         <label for="flat_ru">Тип квартиры (рус):</label>
                         <input class="form-control mb-3" type="text" name="flat_ru" id="flat_ru"
-                            value="{{ $flat->flat_ru }}">
+                            value="{{ old('flat_ru', $flat->flat_ru) }}">
                         <label for="flat_en">Тип квартиры (eng):</label>
                         <input class="form-control mb-3" type="text" name="flat_en" id="flat_en"
-                            value="{{ $flat->flat_en }}">
-                        <div class="mb-3">
+                            value="{{ old('flat_en', $flat->flat_en) }}">
+
+                        <div class="three-columns">
+
+                            <div>
+                                <input type="checkbox" @if ($flat->first) checked @endif name="first" value=1
+                                    id="first">
+                                <label for="first">Первичка</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" @if ($flat->furnished) checked @endif name="furnished"
+                                    value=1 id="furnished">
+                                <label for="furnished">Мебилирована</label>
+                            </div>
+
+                        </div>
+
+
+
+                        {{-- <div class="mb-3">
                             <label for="desc1_ru" class="form-label">
                                 {{ __('Описание 1 на русском') }}
                             </label>
@@ -95,7 +121,7 @@
                                 {{ __('Описание 4 на английском') }}
                             </label>
                             <textarea class="form-control" id="complex-textarea8" name="desc4_en" rows="5">{{ $flat->desc4_en }}</textarea>
-                        </div>
+                        </div> --}}
 
 
                         <div class="form-group">

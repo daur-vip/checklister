@@ -42,7 +42,7 @@ class FlatController extends Controller
     {
         $validatedData = $request->validate(
             [
-                'price' => 'required',
+                'price_euro' => 'required',
                 'square' => 'required',
                 'flat_ru' => 'required',
                 'flat_en' => 'required',
@@ -81,18 +81,20 @@ class FlatController extends Controller
 
         $data = [
             'complex_id' => $request->complex,
-            'price' => $request->price,
+            'price_euro' => $request->price_euro,
+            'price_dollar' => $request->price_dollar,
+            'price_tenge' => $request->price_tenge,
             'square' => $request->square,
             'flat_ru' => $request->flat_ru,
             'flat_en' => $request->flat_en,
-            'desc1_ru' => $request->desc1_ru,
-            'desc1_en' => $request->desc1_en,
-            'desc2_ru' => $request->desc2_ru,
-            'desc2_en' => $request->desc2_en,
-            'desc3_ru' => $request->desc3_ru,
-            'desc3_en' => $request->desc3_en,
-            'desc4_ru' => $request->desc4_ru,
-            'desc4_en' => $request->desc4_en,
+            // 'desc1_ru' => $request->desc1_ru,
+            // 'desc1_en' => $request->desc1_en,
+            // 'desc2_ru' => $request->desc2_ru,
+            // 'desc2_en' => $request->desc2_en,
+            // 'desc3_ru' => $request->desc3_ru,
+            // 'desc3_en' => $request->desc3_en,
+            // 'desc4_ru' => $request->desc4_ru,
+            // 'desc4_en' => $request->desc4_en,
             'image1' => $fullImagePaths[1],
             'image2' => $fullImagePaths[2],
             'image3' => $fullImagePaths[3],
@@ -104,6 +106,24 @@ class FlatController extends Controller
             'image9' => $fullImagePaths[9],
             'image10' => $fullImagePaths[10],
         ];
+
+
+        if ($request->furnished == null) {
+            $myNull = 0;
+        } else {
+            $myNull = 1;
+        }
+        $data['furnished'] = $myNull;
+
+
+
+        if ($request->first == null) {
+            $myNull = 0;
+        } else {
+            $myNull = 1;
+        }
+        $data['first'] = $myNull;
+
 
         Flat::create($data);
         return Redirect()->back()->with('success', 'Flat added successfully');
@@ -144,7 +164,7 @@ class FlatController extends Controller
     {
         $validatedData = $request->validate(
             [
-                'price' => 'required',
+                'price_euro' => 'required',
                 'square' => 'required',
                 'flat_ru' => 'required',
                 'flat_en' => 'required',
@@ -184,22 +204,26 @@ class FlatController extends Controller
             $fullImagePaths[$i] = $fullImagePath;
         }
 
+
+
         $data = [
             'complex_id' => $request->complex,
-            'price' => $request->price,
+            'price_euro' => $request->price_euro,
+            'price_dollar' => $request->price_dollar,
+            'price_tenge' => $request->price_tenge,
             'square' => $request->square,
             'flat_ru' => $request->flat_ru,
             'flat_en' => $request->flat_en,
-            'desc1_ru' => $request->desc1_ru,
-            'desc1_en' => $request->desc1_en,
-            'desc2_ru' => $request->desc2_ru,
-            'desc2_en' => $request->desc2_en,
-            'desc3_ru' => $request->desc3_ru,
-            'desc3_en' => $request->desc3_en,
-            'desc4_ru' => $request->desc4_ru,
-            'desc4_en' => $request->desc4_en,
-            'area_ru' => $request->area_ru,
-            'area_en' => $request->area_en,
+            // 'desc1_ru' => $request->desc1_ru,
+            // 'desc1_en' => $request->desc1_en,
+            // 'desc2_ru' => $request->desc2_ru,
+            // 'desc2_en' => $request->desc2_en,
+            // 'desc3_ru' => $request->desc3_ru,
+            // 'desc3_en' => $request->desc3_en,
+            // 'desc4_ru' => $request->desc4_ru,
+            // 'desc4_en' => $request->desc4_en,
+            // 'area_ru' => $request->area_ru,
+            // 'area_en' => $request->area_en,
             'image1' => $fullImagePaths[1],
             'image2' => $fullImagePaths[2],
             'image3' => $fullImagePaths[3],
@@ -211,6 +235,26 @@ class FlatController extends Controller
             'image9' => $fullImagePaths[9],
             'image10' => $fullImagePaths[10],
         ];
+
+
+        if ($request->furnished == null) {
+            $myNull = 0;
+        } else {
+            $myNull = 1;
+        }
+
+        $data['furnished'] = $myNull;
+
+
+
+        if ($request->first == null) {
+            $myNull = 0;
+        } else {
+            $myNull = 1;
+        }
+        $data['first'] = $myNull;
+
+
 
         $flat->update($data);
         return Redirect()->back()->with('success', 'Flat updated successfully');

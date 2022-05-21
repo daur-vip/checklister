@@ -18,6 +18,11 @@ class CreateComplexesTable extends Migration
             $table->string('name');
             $table->string('area_ru');
             $table->string('area_en');
+            $table->text('map')->nullable();
+            $table->string('seo_desc_ru')->nullable();
+            $table->string('seo_keywords_ru')->nullable();
+            $table->string('seo_desc_en')->nullable();
+            $table->string('seo_keywords_en')->nullable();
             $table->text('desc1_ru')->nullable();
             $table->text('desc2_ru')->nullable();
             $table->text('desc3_ru')->nullable();
@@ -51,7 +56,7 @@ class CreateComplexesTable extends Migration
             $table->boolean('finnish_sauna')->default(1);
             $table->boolean('jacuzzi')->default(1);
             $table->boolean('playground')->default(1);
-            $table->boolean('hairdresser')->default(1);
+            // $table->boolean('hairdresser')->default(1);
             $table->boolean('own_beach')->default(1);
             $table->boolean('bar_pool')->default(1);
             $table->boolean('mini_club')->default(1);
@@ -73,12 +78,13 @@ class CreateComplexesTable extends Migration
             $table->boolean('pavilions')->default(1);
             $table->boolean('child_pool')->default(1);
             $table->boolean('indoor_parking')->default(1);
+            $table->boolean('covered_parking')->default(1);
             $table->boolean('bbq_area')->default(1);
             $table->boolean('basketball')->default(1);
             $table->boolean('amphitheater')->default(1);
             $table->boolean('bowling')->default(1);
             $table->boolean('concierge')->default(1);
-            $table->boolean('ice_rink')->default(1);
+            // $table->boolean('ice_rink')->default(1);
             $table->boolean('massage_room')->default(1);
             $table->boolean('outdoor_pool')->default(1);
             $table->string('pros_1')->nullable();

@@ -340,6 +340,8 @@ body {
 .slider-text--author {
    width: 100%;
    font-weight: 600;
+   padding-bottom: 0px;
+   margin-bottom: 5px;
 }
 
 .slider-text--complex {
@@ -1208,6 +1210,7 @@ input:checked+label+.questions-content {
    .slider-text--author {
       width: 100%;
       font-weight: 600;
+      margin-bottom: 0px;
    }
 
    .services-item-wrap {
@@ -1358,6 +1361,13 @@ input:checked+label+.questions-content {
       align-items: flex-start;
       padding: 40px 10px 10px;
    }
+
+   .slider-content--about {
+      align-items: flex-start;
+      padding: 220px 10px 10px;
+
+   }
+
 
    .about-1 {
       padding: 40px 10px;

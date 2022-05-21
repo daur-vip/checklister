@@ -9,13 +9,11 @@
         App::setLocale(session()->get('locale'));
     }
     @endphp
-    <section class="slider"
-        style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/mahmud.jpg) #141b2d;     background-size: contain 100%; background-repeat:no-repeat;
-                                                                                                                                                                                                                                                                                                                   background-position: right top;">
+    <section class="slider slider-about">
         <div class="gallery inviz">
             <a href="/img/mahmud.jpg" class="big" rel="rel1"><img src="/img/mahmud.jpg" alt="Complex 1"></a>
         </div>
-        <div class="slider-content slider-content--complex">
+        <div class="slider-content slider-content--about">
             <h1 class="slider-title slider-title--complex">
                 ДОРОГИЕ ДРУЗЬЯ
             </h1>
@@ -23,6 +21,11 @@
                 более 6-ти лет наша компания занимается строительством и продажей недвижимости на территории Аланьи. Нашей
                 основной задачей является профессиональная консультация и помощь при выборе и покупки недвижимости. </div>
             <div class="slider-text slider-text--author">Основатель компании, г-н Махмуд Шафие</div>
+            <div class="slider-text slider-text--ceo">(CEO Capital Real Estate, CEO Myflat.kz, CEO Capital Investment,
+                CEO
+                Armor Group, Член совета «Офиса прямых инвестиций при президенте Турции»)
+
+            </div>
 
         </div>
     </section>
@@ -49,16 +52,16 @@
         </div>
     </section>
 
-    <section class="about-2">
+    <section class="about-2" style="height: 1000px">
         <div class="about-2-bg"
             style="background-image: url(../img/team1.jpg);
-                                                                                                                                                                                                                                                                                                                   background-size: cover;
-                                                                                                                                                                                                                                                                                                                   background-repeat: no-repeat;
-                                                                                                                                                                                                                                                                                                                   background-position: center;">
+                                                                                                                                                                                                                                                                                                                                                                           background-size: cover;
+                                                                                                                                                                                                                                                                                                                                                                           background-repeat: no-repeat;
+                                                                                                                                                                                                                                                                                                                                                                           background-position: center;">
         </div>
-        {{-- <div class="gallery inviz">
+        <div class="gallery inviz">
             <a href="/img/team1.jpg" class="big" rel="rel1"><img src="/img/team1.jpg" alt="Complex 1"></a>
-        </div> --}}
+        </div>
         <div class="about-2-wrap">
             <ul>
                 Наша команда всегда готова ответить на Ваши вопросы. <p>Мы всегда на связи!</p>
@@ -77,8 +80,8 @@
         <div class="max-wrap">
             <div class="about-4-wrap">
                 <div class="about-4-left gallery">
-                    <a href="/img/team1.jpg" class="big" rel="rel1"><img class="about-4-left__img"
-                            src="/img/team1.jpg" alt=""></a>
+                    <a href="/img/team5.jpg" class="big" rel="rel1"><img class="about-4-left__img"
+                            src="/img/team5.jpg" alt=""></a>
                 </div>
                 <div class="about-4-right">
                     <div class="gallery">
@@ -94,8 +97,8 @@
                                 src="/img/team4.jpg" alt=""></a>
                     </div>
                     <div class="gallery">
-                        <a href="/{{ $complex->image10 }}" class="big" rel="rel1"><img
-                                class="about-4-right__img" src="/{{ $complex->image10 }}" alt=""></a>
+                        <a href="/img/team6.jpg" class="big" rel="rel1"><img class="about-4-right__img"
+                                src="/img/team6.jpg" alt=""></a>
                     </div>
                 </div>
             </div>

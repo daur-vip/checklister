@@ -20,6 +20,22 @@
    outline: none;
 }
 
+.slider-about {
+   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/mahmud.jpg) #141b2d;
+   background-size: contain 100%;
+   background-repeat: no-repeat;
+   background-position: right top;
+
+}
+
+.slider-text--ceo {
+   width: 100%;
+   font-size: 12px;
+   font-style: italic;
+   padding-bottom: 0px;
+   margin-bottom: 0px;
+}
+
 .nav-contact-us:hover {
    color: #000;
 }
@@ -243,6 +259,15 @@
 
 
 @media (max-width: 767px) {
+
+   .slider-about {
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/mahmud-mini.jpg) #141b2d;
+      background-size: contain 100%;
+      background-repeat: no-repeat;
+      margin-top: 70px;
+      background-position: right top;
+      min-height: auto;
+   }
 
    .complexes-wrap {
       padding: 90px 20px 20px 20px;
