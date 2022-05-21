@@ -28,6 +28,11 @@
 
 }
 
+.search-button {
+   padding: 10px 50px;
+   font-size: 20px;
+}
+
 .slider-text--ceo {
    width: 100%;
    font-size: 12px;
