@@ -28,6 +28,32 @@
 
 }
 
+.slider-services {
+   height: 600px;
+   min-height: 600px;
+   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/slider2.jpg);
+   background-size: cover;
+   background-position: center;
+
+}
+
+.slider-title-services {
+   font-weight: 600;
+   font-size: 36px;
+   line-height: 1.3em;
+   text-align: left;
+   color: #fff;
+   padding-bottom: 10px;
+
+}
+
+.slider-text-services {
+   text-align: left;
+   font-size: 22px;
+   line-height: 1.5em;
+   color: #fff;
+}
+
 .search-button {
    padding: 10px 50px;
    font-size: 20px;
@@ -260,6 +286,17 @@
    .complex__content__text {
       font-size: 16px;
    }
+
+
+   .slider-title-services {
+
+      font-size: 30px;
+   }
+
+   .slider-text-services {
+
+      font-size: 16px;
+   }
 }
 
 
@@ -272,6 +309,16 @@
       margin-top: 70px;
       background-position: right top;
       min-height: auto;
+   }
+
+   .slider-title-services {
+
+      font-size: 30px;
+   }
+
+   .slider-text-services {
+
+      font-size: 16px;
    }
 
    .complexes-wrap {

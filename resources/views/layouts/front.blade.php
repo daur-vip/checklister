@@ -123,7 +123,7 @@ if (session()->get('locale') == null) {
                         <li><a href="/about" class="header__link">{{ __('О нас') }}</a></li>
                         <li><a href="/complex" class="header__link">{{ __('Комплексы') }}</a></li>
                         <li><a href="#flats" class="header__link">{{ __('Новости') }}</a></li>
-                        <li><a href="#services" class="header__link">{{ __('Услуги') }}</a></li>
+                        <li><a href="/services" class="header__link">{{ __('Услуги') }}</a></li>
                         <li><a href="#" class="header__link">{{ __('СМИ о нас') }}</a></li>
                         <li><a href="#footer" class="header__link">{{ __('Контакты') }}</a></li>
                     </ul>
@@ -214,7 +214,7 @@ if (session()->get('locale') == null) {
                         <a class="nav-item" href="/complex">{{ __('Комплексы') }}</a>
                     </li>
                     <li>
-                        <a class="nav-item" href="#services">{{ __('Услуги') }}</a>
+                        <a class="nav-item" href="/services">{{ __('Услуги') }}</a>
                     </li>
                     <li>
                         <a class="nav-item" href="/"><img src="/img/logo.svg" alt="Logo"></a>
