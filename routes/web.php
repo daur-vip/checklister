@@ -40,6 +40,7 @@ Route::get('/contact', function () {
 Route::get('lang/change', [LangController::class, 'change'])->name('changeLang');
 
 Route::resource('complex', App\Http\Controllers\ComplexController::class);
+Route::resource('flat', App\Http\Controllers\FlatController::class);
 
 Auth::routes();
 

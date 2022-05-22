@@ -264,13 +264,17 @@ if (session()->get('locale') == null) {
                                 src="/img/flag-turkey.svg" alt="Turkey">{{ __('Турция') }}
                         </div>
                         <div class="footer-contact-item"><img class="footer-contact-item__image"
-                                src="/img/contacts-house.svg" alt="KZ">Borgo Penelope 1 Appartamento 84</div>
+                                src="/img/contacts-house.svg" alt="KZ">г. Алматы, пр. Достык 101</div>
                         <div class="footer-contact-item"><img class="footer-contact-item__image"
                                 src="/img/contacts-house.svg" alt="KZ">Borgo Penelope 1 Appartamento 84</div>
-                        <div class="footer-contact-item"><img class="footer-contact-item__image"
-                                src="/img/contacts-phone.svg" alt="KZ">+7 777 777 77 77</div>
-                        <div class="footer-contact-item"><img class="footer-contact-item__image"
-                                src="/img/contacts-phone.svg" alt="KZ">+7 777 777 77 77</div>
+                        <a class="slider-link-contact" href="tel:+77777071234">
+                            <div class="footer-contact-item"><img class="footer-contact-item__image"
+                                    src="/img/contacts-phone.svg" alt="KZ">+7 777 707 1234</div>
+                        </a>
+                        <a class="slider-link-contact" href="tel:+905348268407">
+                            <div class="footer-contact-item"><img class="footer-contact-item__image"
+                                    src="/img/contacts-phone.svg" alt="KZ">+90 534 826 8407</div>
+                        </a>
                         <div class="footer-contact-item"><img class="footer-contact-item__image"
                                 src="/img/contacts-mail.svg" alt="KZ">inbox@gmail.com</div>
                         <div class="footer-contact-item"><img class="footer-contact-item__image"
@@ -281,32 +285,59 @@ if (session()->get('locale') == null) {
                 <div class="footer-nav">
                     <h3 class="footer-title">{{ __('Навигация') }}</h3>
                     <div class="footer-nav-items">
-                        <div class="footer-nav-item">
-                            {{ __('О нас') }}
-                        </div>
-                        <div class="footer-nav-item">
-                            {{ __('Комплексы') }}
-                        </div>
-                        <div class="footer-nav-item">
-                            {{ __('Услуги') }}
-                        </div>
-                        <div class="footer-nav-item">
-                            {{ __('СМИ о нас') }}
-                        </div>
+                        <a class="slider-link-contact" href="/about">
+                            <div class="footer-nav-item">
+                                {{ __('О нас') }}
+                            </div>
+                        </a>
+                        <a class="slider-link-contact" href="/complex">
+                            <div class="footer-nav-item">
+                                {{ __('Комплексы') }}
+                            </div>
+                        </a>
+                        <a class="slider-link-contact" href="/services">
+                            <div class="footer-nav-item">
+                                {{ __('Услуги') }}
+                            </div>
+                        </a>
+                        <a class="slider-link-contact" href="#">
+                            <div class="footer-nav-item">
+                                {{ __('СМИ о нас') }}
+                            </div>
+                        </a>
+
                     </div>
                 </div>
                 <div class="footer-socials">
                     <h3 class="footer-title">{{ __('Мы в соц. сетях') }}</h3>
                     <div class="footer-socials-icons">
                         <div class="footer-socials-icon">
-                            <img src="/img/footer-socials-1.svg" alt="Whatsapp">
+                            <a target="_blank"
+                                href="https://wa.me/77777071234?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C+%D1%85%D0%BE%D1%87%D1%83+%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C+%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E+%D0%BF%D0%BE+%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8+%D0%B2+%D0%A2%D1%83%D1%80%D1%86%D0%B8%D0%B8.">
+                                <img src="/img/footer-socials-1.svg" alt="Whatsapp">
+                            </a>
+                        </div>
+
+                        <div class="footer-socials-icon">
+                            <a target="_blank" href="https://t.me/myflatkz"><img style="height: 32px"
+                                    src="/img/socials-telegram-grey.svg" alt="Telegram">
+
+                            </a>
+                        </div>
+
+                        <div class="footer-socials-icon">
+                            <a target="_blank" href="viber://add?number=77777071234"><img style="height: 32px"
+                                    src="/img/socials-viber-grey.svg" alt="Viber">
+
+                            </a>
                         </div>
                         <div class="footer-socials-icon">
-                            <img src="/img/footer-socials-2.svg" alt="TikTok">
+                            <a target="_blank" href="https://instagram.com/myflat.kz"><img style="height: 32px"
+                                    src="/img/footer-socials-3.svg" alt="Viber">
+
+                            </a>
                         </div>
-                        <div class="footer-socials-icon">
-                            <img src="/img/footer-socials-3.svg" alt="Instagram">
-                        </div>
+
                     </div>
                 </div>
             </div>

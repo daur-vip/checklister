@@ -107,7 +107,8 @@
                 <div class="result-items">
                     @foreach ($flats as $flat)
                         <div class="result-item">
-                            <img class="result-img" src="/{{ $flat->image1 }}" alt="Result 1">
+                            <a href="{{ route('flat.show', $flat->id) }}"><img class="result-img"
+                                    src="/{{ $flat->image1 }}" alt="Result 1"></a>
                             <div class="result-item__title-wrap">
                                 <h4 class="result-item__title">{{ $complexes[$flat->complex_id]->name }}</h4>
                             </div>

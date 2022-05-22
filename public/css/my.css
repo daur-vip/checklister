@@ -151,6 +151,88 @@
 }
 
 
+.flat-title {
+   font-size: 100px;
+   font-weight: 500;
+   color: #fff;
+}
+
+.flat-under-title {
+   font-size: 30px;
+   font-style: italic;
+   color: #fff;
+   font-weight: 500;
+}
+
+.flat-price {
+   margin-top: 30px;
+   font-size: 70px;
+   color: rgb(211, 201, 64);
+   line-height: 1em;
+}
+
+.flat-price--mini {
+   font-size: 25px;
+   color: rgb(211, 201, 64);
+   line-height: 1em;
+   font-style: italic;
+   margin-bottom: 70px;
+}
+
+.flat-param {
+   font-size: 30px;
+   color: #fff;
+   line-height: 1.9em;
+}
+
+
+.flat-2-wrap {
+   top: 0;
+   left: 0;
+   position: absolute;
+   z-index: 3;
+   width: 100%;
+   height: 100%;
+   justify-content: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   padding: 10px 10px;
+   font-weight: 500;
+   font-size: 18px;
+   line-height: 1.4em;
+   color: #ffffff;
+}
+
+.flat-2-bg {
+   height: 100%;
+   width: 100%;
+
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   filter: brightness(30%);
+   z-index: 2;
+}
+
+.flat-pros-ul {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 20px 45px;
+}
+
+.flat-pros-ul li {
+   display: block;
+   text-align: left;
+   list-style: inside;
+
+}
+
+.flat-pros-ul li:before {
+   content: "• ";
+}
+
 /* The Modal (background) */
 .my-modal {
    display: none;
@@ -309,6 +391,18 @@
 
       font-size: 16px;
    }
+
+
+
+
+   .flat-pros-ul {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px 40px;
+   }
+
+
+
+
 }
 
 
@@ -368,6 +462,38 @@
 
       padding: 15px 20px;
    }
+
+   .flat-title {
+      font-size: 45px;
+   }
+
+   .flat-under-title {
+      font-size: 16px;
+   }
+
+   .flat-price {
+      margin-top: 30px;
+      font-size: 50px;
+   }
+
+   .flat-price--mini {
+      font-size: 18px;
+
+   }
+
+   .flat-param {
+      font-size: 16px;
+      margin-bottom: 5px;
+   }
+
+   .flat-pros-ul {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3px 20px;
+      font-size: 14px;
+      line-height: 1.6em;
+   }
+
+
 
 }
 
