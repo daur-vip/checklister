@@ -33,6 +33,10 @@ Route::get('/services', function () {
     return view('services');
 })->name('services');
 
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
+
 Route::get('lang/change', [LangController::class, 'change'])->name('changeLang');
 
 Route::resource('complex', App\Http\Controllers\ComplexController::class);

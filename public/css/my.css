@@ -34,7 +34,14 @@
    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/slider2.jpg);
    background-size: cover;
    background-position: center;
+}
 
+.slider-contact {
+   height: 300px;
+   min-height: 300px;
+   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/contact.png);
+   background-size: cover;
+   background-position: center;
 }
 
 .slider-title-services {
@@ -51,6 +58,11 @@
    text-align: left;
    font-size: 22px;
    line-height: 1.5em;
+   color: #fff;
+}
+
+.slider-link-contact {
+   text-decoration: none;
    color: #fff;
 }
 

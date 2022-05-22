@@ -55,17 +55,17 @@
     <section class="about-2" style="height: 1000px">
         <div class="about-2-bg"
             style="background-image: url(../img/team1.jpg);
-                                                                                                                                                                                                                                                                                                                                                                           background-size: cover;
-                                                                                                                                                                                                                                                                                                                                                                           background-repeat: no-repeat;
-                                                                                                                                                                                                                                                                                                                                                                           background-position: center;">
+                                                                                                                                                                                                                                                                                                                                                                               background-size: cover;
+                                                                                                                                                                                                                                                                                                                                                                               background-repeat: no-repeat;
+                                                                                                                                                                                                                                                                                                                                                                               background-position: center;">
         </div>
         <div class="gallery inviz">
             <a href="/img/team1.jpg" class="big" rel="rel1"><img src="/img/team1.jpg" alt="Complex 1"></a>
         </div>
         <div class="about-2-wrap">
-            <ul>
-                Наша команда всегда готова ответить на Ваши вопросы. <p>Мы всегда на связи!</p>
-            </ul>
+
+            Наша команда всегда готова ответить на Ваши вопросы. <p>Мы всегда на связи!</p>
+
         </div>
         <div class="services-triangles complex-triangles">
             <div class="complex-triangles-left-blue"></div>

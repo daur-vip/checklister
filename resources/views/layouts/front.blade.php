@@ -9,6 +9,7 @@
     <link href="/css/simple-lightbox.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link href="{{ asset('css/my.css') }}" rel="stylesheet">
+    <link href="{{ asset('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -125,7 +126,7 @@ if (session()->get('locale') == null) {
                         <li><a href="#flats" class="header__link">{{ __('Новости') }}</a></li>
                         <li><a href="/services" class="header__link">{{ __('Услуги') }}</a></li>
                         <li><a href="#" class="header__link">{{ __('СМИ о нас') }}</a></li>
-                        <li><a href="#footer" class="header__link">{{ __('Контакты') }}</a></li>
+                        <li><a href="/contact" class="header__link">{{ __('Контакты') }}</a></li>
                     </ul>
                 </nav>
             </div>
@@ -226,7 +227,7 @@ if (session()->get('locale') == null) {
                         <a class="nav-item" href="#">{{ __('СМИ о нас') }}</a>
                     </li>
                     <li>
-                        <a class="nav-item" href="#footer">{{ __('Контакты') }}</a>
+                        <a class="nav-item" href="/contact">{{ __('Контакты') }}</a>
                     </li>
 
                 </ul>

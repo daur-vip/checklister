@@ -76,9 +76,9 @@
     <section class="about-2">
         <div class="about-2-bg"
             style="background-image: url(/img/law.jpg);
-                                                                                                                                                                                                                                                                                                                                   background-size: cover;
-                                                                                                                                                                                                                                                                                                                                   background-repeat: no-repeat;
-                                                                                                                                                                                                                                                                                                                                   background-position: center;">
+                                                                                                                                                                                                                                                                                                                                       background-size: cover;
+                                                                                                                                                                                                                                                                                                                                       background-repeat: no-repeat;
+                                                                                                                                                                                                                                                                                                                                       background-position: center;">
         </div>
         <div class="gallery inviz">
             <a href="/img/transfer1.jpg" class="big" rel="rel1"><img src="/img/transfer1.jpg"
