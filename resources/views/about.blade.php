@@ -52,12 +52,8 @@
         </div>
     </section>
 
-    <section class="about-2" style="height: 1000px">
-        <div class="about-2-bg"
-            style="background-image: url(../img/team1.jpg);
-                                                                                                                                                                                                                                                                                                                                                                               background-size: cover;
-                                                                                                                                                                                                                                                                                                                                                                               background-repeat: no-repeat;
-                                                                                                                                                                                                                                                                                                                                                                               background-position: center;">
+    <section class="about-2-about">
+        <div class="about-2-bg-about" style="">
         </div>
         <div class="gallery inviz">
             <a href="/img/team1.jpg" class="big" rel="rel1"><img src="/img/team1.jpg" alt="Complex 1"></a>

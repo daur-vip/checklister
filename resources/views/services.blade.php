@@ -56,7 +56,7 @@
                         Ознакомительный тур*
                     </h1>
 
-                    <p>Рады предложить Вам бесплатный, тур для ознакомления с объектами недвижимости.</p><br>
+                    <p>Рады предложить Вам бесплатный тур, для ознакомления с объектами недвижимости.</p><br>
                     Тур включает в себя:
                     <ol>
                         <li>Встречу в аэропорту, в сопровождении личного менеджера</li>
@@ -64,7 +64,7 @@
                         <li>Ознакомительный тур по городу.</li>
                         <li>Показ объектов недвижимости.</li>
                     </ol>
-                    <span style="font-style: italic; font-size: 70%">* Мы не требуем компенсаций расходов за ознакомительный
+                    <span style="font-style: italic; font-size: 70%">* Мы не требуем компенсации расходов за ознакомительный
                         тур.</span>
                 </div>
 
@@ -76,9 +76,9 @@
     <section class="about-2">
         <div class="about-2-bg"
             style="background-image: url(/img/law.jpg);
-                                                                                                                                                                                                                                                                                                                                       background-size: cover;
-                                                                                                                                                                                                                                                                                                                                       background-repeat: no-repeat;
-                                                                                                                                                                                                                                                                                                                                       background-position: center;">
+                                                                                                                                                                                                                                                                                                                                               background-size: cover;
+                                                                                                                                                                                                                                                                                                                                               background-repeat: no-repeat;
+                                                                                                                                                                                                                                                                                                                                               background-position: center;">
         </div>
         <div class="gallery inviz">
             <a href="/img/transfer1.jpg" class="big" rel="rel1"><img src="/img/transfer1.jpg"
