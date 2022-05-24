@@ -11,13 +11,20 @@
     @endphp
     <section class="slider"
         style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../{{ $news->image1 }});    background-size: cover;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           background-position: center;">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       background-position: center;">
+
+        <div class="gallery inviz">
+            <a href="/{{ $news->image1 }}" class="big" rel="rel1"><img src="/{{ $news->image1 }}"
+                    alt="flat 1"></a>
+        </div>
         @if ($news->image3)
             <div class="gallery inviz">
                 <a href="/{{ $news->image3 }}" class="big" rel="rel1"><img src="/{{ $news->image3 }}"
                         alt="flat 1"></a>
             </div>
         @endif
+
+
 
         @if ($news->image4)
             <div class="gallery inviz">
