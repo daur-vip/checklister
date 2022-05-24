@@ -428,6 +428,10 @@
    margin-bottom: 30px;
 }
 
+.slider-text--news p {
+   margin-bottom: 10px;
+}
+
 @media(min-width: 768px) {
    .isreverse {
       flex-direction: row-reverse;
