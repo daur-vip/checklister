@@ -76,21 +76,20 @@
     <section class="about-2">
         <div class="about-2-bg"
             style="background-image: url(/img/law.jpg);
-                                                                                                                                                                                                                                                                                                                                                                                                   background-size: cover;
-                                                                                                                                                                                                                                                                                                                                                                                                   background-repeat: no-repeat;
-                                                                                                                                                                                                                                                                                                                                                                                                   background-position: center;">
+                                                                                                                                                                                                                                                                                                                                                                                                                       background-size: cover;
+                                                                                                                                                                                                                                                                                                                                                                                                                       background-repeat: no-repeat;
+                                                                                                                                                                                                                                                                                                                                                                                                                       background-position: center;">
         </div>
         <div class="gallery inviz">
             <a href="/img/transfer1.jpg" class="big" rel="rel1"><img src="/img/transfer1.jpg"
                     alt="Complex 1"></a>
         </div>
         <div class="about-2-wrap">
-            <h1 class="slider-title-services">Юридическое сопровождение</h1>
+            <h1 class="slider-title-services">{{ __('Юридическое сопровождение') }}</h1>
 
-            <div class="slider-text-services"> Наши юристы готовы проконсультировать Вас по всем вопросам, сопроводят Вас на
-                всех
-                этапах сделки. Ответят на все Ваши
-                вопросы.</div>
+            <div class="slider-text-services">
+                {{ __('Наши юристы готовы проконсультировать Вас по всем вопросам, сопроводят Вас на всех этапах сделки. Ответят на все Ваши вопросы.') }}
+            </div>
 
         </div>
         <div class="services-triangles complex-triangles">
@@ -105,11 +104,10 @@
             <div class="about-1-text">
                 <div class="slider-text-services">
                     <h1 class="slider-title-services">
-                        Перевод денег
+                        {{ __('Перевод денег') }}
                     </h1>
 
-                    <p>Платеж принимается в любой валюте, как на территории Турции, так и на территории СНГ.
-                        Форма оплаты любая, в том числе криптоплатежи, с комиссией 0%
+                    <p>{{ __('Платеж принимается в любой валюте, как на территории Турции, так и на территории СНГ. Форма оплаты любая, в том числе криптоплатежи, с комиссией 0%.') }}
                     </p>
 
                 </div>

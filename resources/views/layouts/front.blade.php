@@ -275,10 +275,14 @@ if (session()->get('locale') == null) {
                             <div class="footer-contact-item"><img class="footer-contact-item__image"
                                     src="/img/contacts-phone.svg" alt="KZ">+90 534 826 8407</div>
                         </a>
-                        <div class="footer-contact-item"><img class="footer-contact-item__image"
-                                src="/img/contacts-mail.svg" alt="KZ">inbox@gmail.com</div>
-                        <div class="footer-contact-item"><img class="footer-contact-item__image"
-                                src="/img/contacts-mail.svg" alt="KZ">inbox@gmail.com</div>
+                        <a class="slider-link-contact" href="mailto:Myflat.kz@gmail.com">
+                            <div class="footer-contact-item"><img class="footer-contact-item__image"
+                                    src="/img/contacts-mail.svg" alt="KZ">Myflat.kz@gmail.com</div>
+                        </a>
+                        <a class="slider-link-contact" href="mailto:Myflat.kz@gmail.com">
+                            <div class="footer-contact-item"><img class="footer-contact-item__image"
+                                    src="/img/contacts-mail.svg" alt="KZ">Myflat.kz@gmail.com</div>
+                        </a>
                     </div>
 
                 </div>
