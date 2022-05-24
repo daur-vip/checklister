@@ -11678,23 +11678,47 @@ body {
 }
 
 @-webkit-keyframes slideBg {
+  20% {
+    background: url(/img/slider2.jpg);
+    background-size: cover;
+  }
   33% {
     background: url(/img/slider2.jpg);
     background-size: cover;
   }
+  53% {
+    background: url(/img/slider3.jpg);
+    background-size: cover;
+  }
   66% {
     background: url(/img/slider3.jpg);
+    background-size: cover;
+  }
+  87% {
+    background: url(/img/slider1.jpg);
     background-size: cover;
   }
 }
 
 @keyframes slideBg {
+  20% {
+    background: url(/img/slider2.jpg);
+    background-size: cover;
+  }
   33% {
     background: url(/img/slider2.jpg);
     background-size: cover;
   }
+  53% {
+    background: url(/img/slider3.jpg);
+    background-size: cover;
+  }
   66% {
     background: url(/img/slider3.jpg);
+    background-size: cover;
+  }
+  87% {
+    background: url(/img/slider1.jpg);
     background-size: cover;
   }
 }
