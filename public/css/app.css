@@ -11361,16 +11361,6 @@ select {
 }
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
@@ -11659,7 +11649,7 @@ body {
 }
 
 .slider {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/img/slider1.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url(/img/slider1.jpg);
   background-size: cover;
   background-position: center;
   min-height: calc(100vh - 139px);
@@ -11668,6 +11658,84 @@ body {
   justify-content: center;
 }
 
+.slider3 {
+  background-size: cover;
+  background-position: center;
+  min-height: calc(100vh - 139px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-animation: slideBg 20s infinite linear;
+          animation: slideBg 20s infinite linear;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background: url(/img/slider1.jpg);
+  background-size: cover;
+}
+
+@-webkit-keyframes slideBg {
+  33% {
+    background: url(/img/slider2.jpg);
+    background-size: cover;
+  }
+  66% {
+    background: url(/img/slider3.jpg);
+    background-size: cover;
+  }
+}
+
+@keyframes slideBg {
+  33% {
+    background: url(/img/slider2.jpg);
+    background-size: cover;
+  }
+  66% {
+    background: url(/img/slider3.jpg);
+    background-size: cover;
+  }
+}
+.slider1 {
+  position: static;
+  left: -100%;
+  top: -100%;
+  background-size: cover;
+  background-position: center;
+  min-height: calc(100vh - 139px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-animation: slideBg1 1s infinite linear;
+          animation: slideBg1 1s infinite linear;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background: url(/img/slider1.jpg);
+}
+
+@-webkit-keyframes slideBg1 {
+  33% {
+    background: url(/img/slider2.jpg);
+  }
+  66% {
+    background: url(/img/slider3.jpg);
+  }
+}
+
+@keyframes slideBg1 {
+  33% {
+    background: url(/img/slider2.jpg);
+  }
+  66% {
+    background: url(/img/slider3.jpg);
+  }
+}
 .slider-content {
   display: flex;
   flex-direction: column;

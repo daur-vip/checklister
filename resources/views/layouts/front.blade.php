@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyFlat - {{ __('недвижимость в Турции') }}</title>
+    <link rel="preload" href="/img/slide2.jpg" as="image">
+    <link rel="preload" href="/img/slide3.jpg" as="image">
     <link href="/css/simple-lightbox.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link href="{{ asset('css/my.css') }}" rel="stylesheet">
@@ -15,6 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet">
+
 
 </head>
 

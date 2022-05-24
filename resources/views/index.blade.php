@@ -8,7 +8,8 @@
         App::setLocale(session()->get('locale'));
     }
     @endphp
-    <section class="slider">
+    <section class="slider3">
+        <div class="slider1"></div>
         <div class="slider-content">
             <h1 class="slider-title">
                 {{ __('MY FLAT') }} -<br />
