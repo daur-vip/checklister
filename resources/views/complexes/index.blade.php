@@ -26,7 +26,7 @@
                             {{ $complex->name }}
                         </div>
                         @php
-                            $maxlen = 550;
+                            $maxlen = 480;
                             $file1 = $complex->{'desc1_' . app()->getLocale()};
                             if (strlen($file1) > $maxlen) {
                                 $file1 = substr($file1, 0, strrpos($file1, '.', $maxlen - strlen($file1)) + 1);
