@@ -13,7 +13,7 @@
 
         <div class="slider-content slider-content--complex">
             <h1 class="slider-title-services">
-                Контакты
+                {{ __('Контакты') }}
             </h1>
         </div>
     </section>
@@ -25,13 +25,14 @@
             <div class="about-1-text">
                 <div class="slider-text-services">
                     <h1 class="slider-title-services">
-                        Казахстан
+                        {{ __('Казахстан') }}
                     </h1>
 
-                    <p><span style="font-weight: 600">Адрес:</span> г. Алматы, пр. Достык 101, офис 2</p><br>
+                    <p><span style="font-weight: 600">{{ __('Адрес') }}:</span> {{ __('г. Алматы, пр. Абая 151') }}</p>
+                    <br>
 
                     <ul style="line-height: 1.9em">
-                        <li><a class="slider-link-contact" href="tel:+77777071234">Телефон: +7 777
+                        <li><a class="slider-link-contact" href="tel:+77777071234">{{ __('Телефон') }}: +7 777
                                 707
                                 1234</a></li>
 
@@ -62,14 +63,15 @@
             <div class="about-1-text">
                 <div class="slider-text-services">
                     <h1 class="slider-title-services">
-                        Турция
+                        {{ __('Турция') }}
                     </h1>
 
-                    <p><span style="font-weight: 600">Адрес: </span>Mahmutlar, Capital Real Estate Office, Barbaros Cd. No:
-                        16, 07460 Alanya/Antalya, Турция</p><br>
+                    <p><span style="font-weight: 600">{{ __('Адрес') }}: </span>Mahmutlar, Barbaros Cd. No:
+                        16, 07460 Alanya</p><br>
 
                     <ul style="line-height: 1.9em">
-                        <li><a class="slider-link-contact" href="tel:+905348268407">Телефон: +90 534 826 8407</a></li>
+                        <li><a class="slider-link-contact" href="tel:+905348268407">{{ __('Телефон') }}: +90 534 826
+                                8407</a></li>
 
                         <li><a class="slider-link-contact" target="_blank"
                                 href="https://wa.me/905348268407?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C+%D1%85%D0%BE%D1%87%D1%83+%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C+%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E+%D0%BF%D0%BE+%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8+%D0%B2+%D0%A2%D1%83%D1%80%D1%86%D0%B8%D0%B8.">Whatsapp:

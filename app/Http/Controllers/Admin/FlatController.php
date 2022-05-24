@@ -189,7 +189,7 @@ class FlatController extends Controller
             $imageName = "image" . $i;
             if ($image != null) {
                 $old_image = $flat->{$imageName};
-                unlink($old_image);
+                if ($flat->{$imageName} != null) unlink($old_image);
                 $imageNameGen = hexdec(uniqid()) . '.' . strtolower($image->getClientOriginalExtension());
                 $fullImagePath = 'images/flats/' . $imageNameGen;
                 $img = Image::make($image);

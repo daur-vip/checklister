@@ -98,7 +98,9 @@
         </form>
 
         @php
-            $flats = App\Models\Flat::orderBy('id', 'ASC')->get();
+            $flats = App\Models\Flat::orderBy('id', 'ASC')
+                ->take(6)
+                ->get();
             $complexes = App\Models\Complex::all()->keyBy('id');
         @endphp
 
@@ -232,47 +234,32 @@
                 <h2 class="media-title">
                     СМИ о нас
                 </h2>
-                <p class="media-desc">
-                    Lorem Ipsum является текст-заполнитель обычно используется в графических, печать и издательской
-                    индустрии
-                    для
-                    предварительного просмотра макета и визуальных макетах
-                </p>
                 <div class="media-items">
-                    <div class="media-item-container">
-                        <div class="media-item">
-                            <img src="/img/media-quote.png" alt="quote" class="media-quote">
-                            <div class="media-content">
-                                <p class="media-text">
-                                    Lorem Ipsum является текст-заполнитель обычно используется в графических, печать</p>
-                                <p class="media-unit">
-                                    - Портал "ИМЯ"
-                                </p>
-                                <a href="#" class="media-link">Перейти</a>
-                            </div>
+                    @php
+                        $manyNews = App\Models\Media::orderBy('id', 'ASC')
+                            ->take(2)
+                            ->get();
+                    @endphp
+                    @foreach ($manyNews as $news)
+                        <div class="media-item-container">
+                            <div class="media-item">
+                                <img src="/img/media-quote.png" alt="quote" class="media-quote">
+                                <div class="media-content">
+                                    <p class="media-text">
+                                        {{ $news->{'title_' . app()->getLocale()} }}</p>
+                                    <p class="media-unit">
+                                        {{ __('Источник') }} {{ $news->{'smi_' . app()->getLocale()} }}
+                                    </p>
+                                    <a href="{{ route('media.show', $news->id) }}"
+                                        class="media-link">{{ __('Перейти') }}</a>
+                                </div>
 
-                            <div class="media-image">
-                                <img src="/img/media-1.jpg" alt="Media 1">
+                                <div class="media-image"><a href="{{ route('media.show', $news->id) }}">
+                                        <img src="/img/media-1.jpg" alt="Media 1"></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="media-item-container">
-                        <div class="media-item">
-                            <img src="/img/media-quote.png" alt="quote" class="media-quote">
-                            <div class="media-content">
-                                <p class="media-text">
-                                    Lorem Ipsum является текст-заполнитель обычно используется в графических, печать</p>
-                                <p class="media-unit">
-                                    - Портал "ИМЯ"
-                                </p>
-                                <a href="#" class="media-link">Перейти</a>
-                            </div>
-
-                            <div class="media-image">
-                                <img src="/img/media-2.jpg" alt="Media 2">
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

@@ -24,10 +24,17 @@
                 </a>
             </li>
             <li class="nav-group">
-                <a class="nav-link" href="{{ route('admin.pages.index') }}">
+                <a class="nav-link" href="{{ route('admin.news.index') }}">
                     <svg class="nav-icon">
                         <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-puzzle') }}"></use>
                     </svg>{{ __('News') }}
+                </a>
+            </li>
+            <li class="nav-group">
+                <a class="nav-link" href="{{ route('admin.media.index') }}">
+                    <svg class="nav-icon">
+                        <use xlink:href="{{ asset('vendors/@coreui/icons/svg/free.svg#cil-puzzle') }}"></use>
+                    </svg>{{ __('Media') }}
                 </a>
             </li>
 

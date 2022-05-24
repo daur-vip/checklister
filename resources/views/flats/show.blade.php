@@ -11,11 +11,40 @@
     @endphp
     <section class="slider"
         style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../{{ $flat->image1 }});    background-size: cover;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                           background-position: center;">
-        <div class="gallery inviz">
-            <a href="/{{ $complex->image1 }}" class="big" rel="rel1"><img src="/{{ $complex->image1 }}"
-                    alt="Complex 1"></a>
-        </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           background-position: center;">
+        @if ($flat->image6)
+            <div class="gallery inviz">
+                <a href="/{{ $flat->image6 }}" class="big" rel="rel1"><img src="/{{ $flat->image6 }}"
+                        alt="flat 1"></a>
+            </div>
+        @endif
+
+        @if ($flat->image7)
+            <div class="gallery inviz">
+                <a href="/{{ $flat->image7 }}" class="big" rel="rel1"><img src="/{{ $flat->image7 }}"
+                        alt="flat 1"></a>
+            </div>
+        @endif
+
+        @if ($flat->image8)
+            <div class="gallery inviz">
+                <a href="/{{ $flat->image8 }}" class="big" rel="rel1"><img src="/{{ $flat->image8 }}"
+                        alt="flat 1"></a>
+            </div>
+        @endif
+        @if ($flat->image9)
+            <div class="gallery inviz">
+                <a href="/{{ $flat->image9 }}" class="big" rel="rel1"><img src="/{{ $flat->image9 }}"
+                        alt="flat 1"></a>
+            </div>
+        @endif
+        @if ($flat->image10)
+            <div class="gallery inviz">
+                <a href="/{{ $flat->image10 }}" class="big" rel="rel1"><img src="/{{ $flat->image10 }}"
+                        alt="Complex 1"></a>
+            </div>
+        @endif
+
         <div class="slider-content slider-content--complex">
             <h1 class="flat-title">
                 {{ $flat->{'flat_' . app()->getLocale()} }}
@@ -33,7 +62,8 @@
                 @endif
             </div>
             <div class="flat-price">{{ $flat->price_euro }} €</div>
-            <div class="flat-price--mini">{{ $flat->price_dollar }} $ / {{ $flat->price_tenge }} ₸</div>
+            {{-- <div class="flat-price--mini">{{ $flat->price_dollar }} $ / {{ $flat->price_tenge }} ₸
+            </div> --}}
             <div class="flat-param"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="100%" fill="currentColor"
                     class="bi bi-house result-item__icon" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
@@ -100,9 +130,9 @@
     <section class="about-2">
         <div class="flat-2-bg"
             style="background-image: url(../{{ $flat->image3 }});
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                           background-size: cover;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                           background-repeat: no-repeat;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                           background-position: center;">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           background-size: cover;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           background-repeat: no-repeat;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           background-position: center;">
         </div>
         <div class="gallery inviz">
             <a href="/{{ $complex->image3 }}" class="big" rel="rel1"><img src="/{{ $complex->image3 }}"

@@ -25,8 +25,14 @@
                         <div class="complex__content__title">
                             {{ $complex->name }}
                         </div>
-                        <div class="complex__content__text">
-                            {!! $complex->{'desc1_' . app()->getLocale()} !!}
+                        @php
+                            $maxlen = 430;
+                            $file = $complex->{'desc1_' . app()->getLocale()};
+                            if (strlen($file) > $maxlen) {
+                                $file = substr($file, 0, strrpos($file, '. ', $maxlen - strlen($file)) + 1);
+                            }
+                        @endphp
+                        <div class="complex__content__text">{!! $file !!}
                         </div>
 
                         <div class="complex__content__button">

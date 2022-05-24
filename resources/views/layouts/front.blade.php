@@ -123,9 +123,9 @@ if (session()->get('locale') == null) {
                     <ul class="header__list">
                         <li><a href="/about" class="header__link">{{ __('О нас') }}</a></li>
                         <li><a href="/complex" class="header__link">{{ __('Комплексы') }}</a></li>
-                        <li><a href="#flats" class="header__link">{{ __('Новости') }}</a></li>
+                        <li><a href="/news" class="header__link">{{ __('Новости') }}</a></li>
                         <li><a href="/services" class="header__link">{{ __('Услуги') }}</a></li>
-                        <li><a href="#" class="header__link">{{ __('СМИ о нас') }}</a></li>
+                        <li><a href="/media" class="header__link">{{ __('СМИ о нас') }}</a></li>
                         <li><a href="/contact" class="header__link">{{ __('Контакты') }}</a></li>
                     </ul>
                 </nav>
@@ -221,10 +221,10 @@ if (session()->get('locale') == null) {
                         <a class="nav-item" href="/"><img src="/img/logo.svg" alt="Logo"></a>
                     </li>
                     <li>
-                        <a class="nav-item" href="#">{{ __('Новости') }}</a>
+                        <a class="nav-item" href="/news">{{ __('Новости') }}</a>
                     </li>
                     <li>
-                        <a class="nav-item" href="#">{{ __('СМИ о нас') }}</a>
+                        <a class="nav-item" href="/media">{{ __('СМИ о нас') }}</a>
                     </li>
                     <li>
                         <a class="nav-item" href="/contact">{{ __('Контакты') }}</a>
@@ -235,7 +235,6 @@ if (session()->get('locale') == null) {
             <div class="nav-right">
                 <!-- Trigger/Open The Modal -->
                 <button id="myBtn" class="nav-contact-us">{{ __('Оставить заявку') }}</button>
-
 
             </div>
 
@@ -264,9 +263,10 @@ if (session()->get('locale') == null) {
                                 src="/img/flag-turkey.svg" alt="Turkey">{{ __('Турция') }}
                         </div>
                         <div class="footer-contact-item"><img class="footer-contact-item__image"
-                                src="/img/contacts-house.svg" alt="KZ">г. Алматы, пр. Достык 101</div>
+                                src="/img/contacts-house.svg" alt="KZ">{{ __('г. Алматы, пр. Абая 151') }}</div>
                         <div class="footer-contact-item"><img class="footer-contact-item__image"
-                                src="/img/contacts-house.svg" alt="KZ">Borgo Penelope 1 Appartamento 84</div>
+                                src="/img/contacts-house.svg" alt="KZ">Mahmutlar, Barbaros Cd. No: 16, 07460 Alanya
+                        </div>
                         <a class="slider-link-contact" href="tel:+77777071234">
                             <div class="footer-contact-item"><img class="footer-contact-item__image"
                                     src="/img/contacts-phone.svg" alt="KZ">+7 777 707 1234</div>
@@ -300,7 +300,7 @@ if (session()->get('locale') == null) {
                                 {{ __('Услуги') }}
                             </div>
                         </a>
-                        <a class="slider-link-contact" href="#">
+                        <a class="slider-link-contact" href="/media">
                             <div class="footer-nav-item">
                                 {{ __('СМИ о нас') }}
                             </div>

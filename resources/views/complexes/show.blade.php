@@ -11,7 +11,7 @@
     @endphp
     <section class="slider"
         style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../{{ $complex->image1 }});    background-size: cover;
-                                                                                                                                                               background-position: center;">
+                                                                                                                                                                   background-position: center;">
         <div class="gallery inviz">
             <a href="/{{ $complex->image1 }}" class="big" rel="rel1"><img src="/{{ $complex->image1 }}"
                     alt="Complex 1"></a>
@@ -43,9 +43,9 @@
     <section class="about-2">
         <div class="about-2-bg"
             style="background-image: url(../{{ $complex->image3 }});
-                                                                                                                                                               background-size: cover;
-                                                                                                                                                               background-repeat: no-repeat;
-                                                                                                                                                               background-position: center;">
+                                                                                                                                                                   background-size: cover;
+                                                                                                                                                                   background-repeat: no-repeat;
+                                                                                                                                                                   background-position: center;">
         </div>
         <div class="gallery inviz">
             <a href="/{{ $complex->image3 }}" class="big" rel="rel1"><img src="/{{ $complex->image3 }}"
@@ -85,7 +85,7 @@
 
     <section class="about-4">
         <h2 class="section-4__title">
-            {{ __('Инфраструктура') }}
+            {{ __('Фотогалерея') }}
         </h2>
         <div class="max-wrap">
             <div class="about-4-wrap">
@@ -123,9 +123,9 @@
         </div>
         <div class="about-5-bg"
             style="background-image: url(/{{ $complex->image11 }});
-                                                                                                                                                               background-size: cover;
-                                                                                                                                                               background-repeat: no-repeat;
-                                                                                                                                                               background-position: center;">
+                                                                                                                                                                   background-size: cover;
+                                                                                                                                                                   background-repeat: no-repeat;
+                                                                                                                                                                   background-position: center;">
         </div>
         <div class="about-5-wrap">
             <div class="about-5-item">

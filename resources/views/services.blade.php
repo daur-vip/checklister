@@ -13,7 +13,7 @@
 
         <div class="slider-content slider-content--complex">
             <h1 class="slider-title-services">
-                Онлайн-консультация и подбор недвижимости
+                {{ __('Онлайн консультация и подбор недвижимости') }}
             </h1>
             <div class="slider-text-services">
                 {{ __('Основываясь на Ваших пожеланиях и нашем профессионализме, мы подберем для Вас лучшее предложение в соотношении цена/качество. Без КОМИССИЙ. БЕЗ ПЕРЕПЛАТ.') }}
@@ -53,19 +53,19 @@
             <div class="about-1-text">
                 <div class="slider-text-services">
                     <h1 class="slider-title-services">
-                        Ознакомительный тур*
+                        {{ __('Ознакомительный тур') }}*
                     </h1>
 
-                    <p>Рады предложить Вам бесплатный тур, для ознакомления с объектами недвижимости.</p><br>
-                    Тур включает в себя:
+                    <p>{{ __('Рады предложить Вам бесплатный тур, для ознакомления с объектами недвижимости.') }}</p><br>
+                    {{ __('Тур включает в себя') }}:
                     <ol>
-                        <li>Встречу в аэропорту, в сопровождении личного менеджера</li>
-                        <li>Заселение в апартаментах Премиум класса.</li>
-                        <li>Ознакомительный тур по городу.</li>
-                        <li>Показ объектов недвижимости.</li>
+                        <li>{{ __('Встречу в аэропорту, в сопровождении личного менеджера') }}</li>
+                        <li>{{ __('Заселение в апартаментах Премиум класса') }}</li>
+                        <li>{{ __('Ознакомительный тур по городу') }}</li>
+                        <li>{{ __('Показ объектов недвижимости') }}</li>
                     </ol>
-                    <span style="font-style: italic; font-size: 70%">* Мы не требуем компенсации расходов за ознакомительный
-                        тур.</span>
+                    <span style="font-style: italic; font-size: 70%">*
+                        {{ __('Мы не требуем компенсации расходов за ознакомительный тур.') }}</span>
                 </div>
 
             </div>
@@ -76,18 +76,19 @@
     <section class="about-2">
         <div class="about-2-bg"
             style="background-image: url(/img/law.jpg);
-                                                                                                                                                                                                                                                                                                                                               background-size: cover;
-                                                                                                                                                                                                                                                                                                                                               background-repeat: no-repeat;
-                                                                                                                                                                                                                                                                                                                                               background-position: center;">
+                                                                                                                                                                                                                                                                                                                                                                                                   background-size: cover;
+                                                                                                                                                                                                                                                                                                                                                                                                   background-repeat: no-repeat;
+                                                                                                                                                                                                                                                                                                                                                                                                   background-position: center;">
         </div>
         <div class="gallery inviz">
             <a href="/img/transfer1.jpg" class="big" rel="rel1"><img src="/img/transfer1.jpg"
                     alt="Complex 1"></a>
         </div>
         <div class="about-2-wrap">
-            <h1 class="slider-title-services">Юридическое сопровождение.</h1>
+            <h1 class="slider-title-services">Юридическое сопровождение</h1>
 
-            <div class="slider-text-services"> Наши юристы проконсультировать Вас по всем вопросам, сопроводят Вас на всех
+            <div class="slider-text-services"> Наши юристы готовы проконсультировать Вас по всем вопросам, сопроводят Вас на
+                всех
                 этапах сделки. Ответят на все Ваши
                 вопросы.</div>
 
@@ -116,7 +117,7 @@
             </div>
             <div class="about-1-image">
 
-                <img class="image-fit" src="/img/transfer2.jpg" alt="Complex 2">
+                <img class="image-fit" src="/img/exchange.jpg" alt="Complex 2">
 
             </div>
 

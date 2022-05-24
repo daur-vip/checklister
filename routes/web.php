@@ -4,6 +4,8 @@ use App\Http\Controllers\Admin\ChecklistController;
 use App\Http\Controllers\Admin\ChecklistGroupController;
 use App\Http\Controllers\Admin\ComplexController;
 use App\Http\Controllers\Admin\FlatController;
+use App\Http\Controllers\Admin\MediaController;
+use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\PageController;
 use App\Http\Controllers\Admin\TaskController;
 use App\Http\Controllers\LangController;
@@ -41,6 +43,8 @@ Route::get('lang/change', [LangController::class, 'change'])->name('changeLang')
 
 Route::resource('complex', App\Http\Controllers\ComplexController::class);
 Route::resource('flat', App\Http\Controllers\FlatController::class);
+Route::resource('news', App\Http\Controllers\NewsController::class);
+Route::resource('media', App\Http\Controllers\MediaController::class);
 
 Auth::routes();
 
@@ -52,6 +56,8 @@ Route::group(['middleware' => 'auth'], function () {
         Route::resource('complexes', ComplexController::class);
         Route::resource('flats', FlatController::class);
         Route::resource('pages', PageController::class);
+        Route::resource('news', NewsController::class);
+        Route::resource('media', MediaController::class);
         Route::resource('checklist_groups', ChecklistGroupController::class);
         Route::resource('checklist_groups.checklists', ChecklistController::class);
         Route::resource('checklists.tasks', TaskController::class);
