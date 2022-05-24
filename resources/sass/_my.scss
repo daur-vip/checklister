@@ -1353,7 +1353,7 @@ input:checked+label+.questions-content {
 
    .max-wrap {
       max-width: 767px;
-      margin: 0px 5%;
+      margin: 0px 4px;
    }
 
    .questions {
@@ -1521,5 +1521,11 @@ input:checked+label+.questions-content {
    }
 
 
+   .footer-contact-items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px 10px;
+      font-size: 12px;
+   }
 
 }
