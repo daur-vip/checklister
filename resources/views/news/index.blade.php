@@ -33,12 +33,20 @@
                         </div>
                         <div class="complex__content__text">
                             @php
-                                
-                                $maxlen = 430;
-                                $file = mb_strcut($news->{'desc1_' . app()->getLocale()}, 0, 300) . '...';
-                                // if (strlen($file) > $maxlen) {
-                                //     $file = substr($file, 0, strrpos($file, '. ', $maxlen - strlen($file)) + 1);
-                                // }
+                                $maxlen = 400;
+                                $file1 = $news->{'desc1_' . app()->getLocale()};
+                                if (strlen($file1) > $maxlen) {
+                                    $file1 = substr($file1, 0, strrpos($file1, '.', $maxlen - strlen($file1)) + 1);
+                                }
+                                $file2 = $news->{'desc1_' . app()->getLocale()};
+                                if (strlen($file2) > $maxlen) {
+                                    $file2 = substr($file2, 0, strrpos($file2, '!', $maxlen - strlen($file2)) + 1);
+                                }
+                                if (mb_strlen($file2) > mb_strlen($file1)) {
+                                    $file = $file2;
+                                } else {
+                                    $file = $file1;
+                                }
                             @endphp
                             {!! $file !!}
                         </div>
