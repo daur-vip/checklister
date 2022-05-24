@@ -98,7 +98,7 @@
         </form>
 
         @php
-            $flats = App\Models\Flat::orderBy('id', 'ASC')
+            $flats = App\Models\Flat::orderBy('id', 'DESC')
                 ->take(6)
                 ->get();
             $complexes = App\Models\Complex::all()->keyBy('id');

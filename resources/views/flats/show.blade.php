@@ -11,7 +11,7 @@
     @endphp
     <section class="slider"
         style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../{{ $flat->image1 }});    background-size: cover;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           background-position: center;">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   background-position: center;">
         @if ($flat->image6)
             <div class="gallery inviz">
                 <a href="/{{ $flat->image6 }}" class="big" rel="rel1"><img src="/{{ $flat->image6 }}"
@@ -61,7 +61,7 @@
                     {{ __('Без мебели') }}
                 @endif
             </div>
-            <div class="flat-price">{{ $flat->price_euro }} €</div>
+            <div class="flat-price">{{ __('от') }} {{ $flat->price_euro }} €</div>
             {{-- <div class="flat-price--mini">{{ $flat->price_dollar }} $ / {{ $flat->price_tenge }} ₸
             </div> --}}
             <div class="flat-param"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="100%" fill="currentColor"
@@ -130,9 +130,9 @@
     <section class="about-2">
         <div class="flat-2-bg"
             style="background-image: url(../{{ $flat->image3 }});
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           background-size: cover;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           background-repeat: no-repeat;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           background-position: center;">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   background-size: cover;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   background-repeat: no-repeat;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   background-position: center;">
         </div>
         <div class="gallery inviz">
             <a href="/{{ $complex->image3 }}" class="big" rel="rel1"><img src="/{{ $complex->image3 }}"
