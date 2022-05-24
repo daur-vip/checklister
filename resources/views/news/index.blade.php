@@ -35,10 +35,10 @@
                             @php
                                 
                                 $maxlen = 430;
-                                $file = $news->{'desc1_' . app()->getLocale()};
-                                if (strlen($file) > $maxlen) {
-                                    $file = substr($file, 0, strrpos($file, '. ', $maxlen - strlen($file)) + 1);
-                                }
+                                $file = mb_strcut($news->{'desc1_' . app()->getLocale()}, 0, 300) . '...';
+                                // if (strlen($file) > $maxlen) {
+                                //     $file = substr($file, 0, strrpos($file, '. ', $maxlen - strlen($file)) + 1);
+                                // }
                             @endphp
                             {!! $file !!}
                         </div>

@@ -393,6 +393,10 @@
    padding: 0px 20px;
 }
 
+.about-1-news p {
+   margin-bottom: 10px;
+}
+
 .image-news {
    width: 100%;
    display: inline;
@@ -473,6 +477,7 @@
       font-size: 17px;
       padding: 0px 10px;
    }
+
 
    .about-1-wrap-news {
       margin: 0px;
