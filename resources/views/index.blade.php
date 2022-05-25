@@ -318,19 +318,19 @@
                                 <img src="/img/media-quote.png" alt="quote" class="media-quote">
                                 <div class="media-content">
                                     <div class="media-image-mini"><a href="{{ route('media.show', $news->id) }}">
-                                            <img class="media-image-mini" src="{{ $news->image2 }}" alt="Media 1"></a>
+                                            <img class="media-image-mini" src="{{ $news->image1 }}" alt="Media 1"></a>
                                     </div>
                                     <p class="media-text">
                                         {{ $news->{'title_' . app()->getLocale()} }}</p>
                                     <p class="media-unit">
-                                        {{ __('Источник') }} {{ $news->{'smi_' . app()->getLocale()} }}
+                                        {{ __('Источник') }}: {{ $news->{'smi_' . app()->getLocale()} }}
                                     </p>
                                     <a href="{{ route('media.show', $news->id) }}"
                                         class="media-link">{{ __('Перейти') }}</a>
                                 </div>
 
                                 <div class="media-image"><a href="{{ route('media.show', $news->id) }}">
-                                        <img class="media-image" src=" {{ $news->image2 }}" alt="Media 1"></a>
+                                        <img class="media-image" src=" {{ $news->image1 }}" alt="Media 1"></a>
                                 </div>
                             </div>
                         </div>
