@@ -88,6 +88,12 @@
    margin-bottom: 0px;
 }
 
+
+.media-image-mini {
+   width: 100%;
+   display: none;
+}
+
 .nav-contact-us:hover {
    color: #000;
 }
@@ -634,6 +640,12 @@
    }
 
 
+   .media-image-mini {
+      display: block;
+      margin-bottom: 10px;
+      height: 350px;
+      object-fit: cover;
+   }
 
 }
 

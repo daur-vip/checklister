@@ -11,7 +11,7 @@
     @endphp
     <section class="slider"
         style="background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../{{ $flat->image1 }});    background-size: cover;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   background-position: center;">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           background-position: center;">
         @if ($flat->image6)
             <div class="gallery inviz">
                 <a href="/{{ $flat->image6 }}" class="big" rel="rel1"><img src="/{{ $flat->image6 }}"
@@ -79,7 +79,7 @@
                         d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z">
                     </path>
                     <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
-                </svg> {{ $complex->{'area_' . app()->getLocale()} }}</div>
+                </svg> {{ __('Аланья') }} / {{ $complex->{'area_' . app()->getLocale()} }}</div>
             <div class="flat-param"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="100%" fill="currentColor"
                     class="bi bi-arrows-fullscreen result-item__icon result-item__icon--square" viewBox="0 0 16 16">
                     <path fill-rule="evenodd"
@@ -130,9 +130,9 @@
     <section class="about-2">
         <div class="flat-2-bg"
             style="background-image: url(../{{ $flat->image3 }});
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   background-size: cover;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   background-repeat: no-repeat;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   background-position: center;">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           background-size: cover;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           background-repeat: no-repeat;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           background-position: center;">
         </div>
         <div class="gallery inviz">
             <a href="/{{ $complex->image3 }}" class="big" rel="rel1"><img src="/{{ $complex->image3 }}"
