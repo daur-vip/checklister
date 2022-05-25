@@ -733,6 +733,8 @@ body {
 
 .media-image {
    width: 240px;
+   height: 350px;
+   object-fit: cover;
 }
 
 .media-item-container {

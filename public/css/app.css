@@ -12115,6 +12115,9 @@ body {
 
 .media-image {
   width: 240px;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .media-item-container {
