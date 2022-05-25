@@ -23,7 +23,7 @@ class SendEmailController extends Controller
             'phone'     =>  $request->phone,
             'message'   =>   $request->message
         );
-        Mail::to('mail@daur.vip')->send(new SendMail($data));
+        Mail::to('myflat.kz@gmail.com')->send(new SendMail($data));
         return redirect()->back()->with('success', 'Thanks for contacting us!');
     }
 }
