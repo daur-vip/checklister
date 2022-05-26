@@ -31,7 +31,7 @@ if (session()->get('locale') == null) {
 
 
 <body>
-
+    <button onclick="topFunction()" id="goTop" title="Go to top"></button>
     <!-- The Modal -->
     <div id="myModal" class="my-modal">
 
@@ -350,7 +350,29 @@ if (session()->get('locale') == null) {
             </div>
         </div>
     </footer>
+    <script>
+        //Get the button:
+        mybutton = document.getElementById("goTop");
 
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
 
     <script src="/js/script.js"></script>
